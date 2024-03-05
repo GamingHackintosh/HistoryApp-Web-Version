@@ -1,3 +1,4 @@
+/*===== Настройки =====*/
 body, html {
     height: 100%;
     margin: 0;
@@ -7,13 +8,17 @@ body, html {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    flex: 1; /* Занимает доступное пространство */
+    padding-top: 20px; 
+    margin-top: 60px; 
+}
+section {
+    margin-bottom: 20px;
+}
+section h2 {
+    font-weight: bold; /* Это сделает текст заголовка толстым */
 }
 
 /*===== Шапка =====*/
@@ -29,6 +34,11 @@ header {
 }
 
 
+.Search {
+    position: relative;
+    text-align: center;
+    padding: 100px;
+}
 
 #search-input {
     width: 300px;
@@ -51,7 +61,4 @@ footer {
     text-align: center;
     padding: 20px 0;
     width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
 }
