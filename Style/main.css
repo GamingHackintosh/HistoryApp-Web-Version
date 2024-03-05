@@ -3,6 +3,8 @@ body {
     text-align: center;
 }
 
+
+
 #search-input {
     width: 300px;
     padding: 10px;
@@ -14,4 +16,19 @@ body {
 
 #results {
     margin-top: 20px;
+}
+
+
+/*===== Самый низ =====*/ 
+footer {
+    background-color: #333;
+    border-radius: 50px;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 50%; /* Центрирование по горизонтали */
+    transform: translateX(-50%); /* Сдвиг на половину ширины футера назад */
+    width: 40%; /* Или 100%, если нужно на всю ширину */
 }
