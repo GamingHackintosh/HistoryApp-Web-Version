@@ -3,7 +3,8 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
     display: flex;
@@ -11,9 +12,9 @@ body {
 }
 /*===== Основной блок =====*/ 
 main {
-    flex: 1; /* Занимает доступное пространство */
+    flex: 1; 
     padding-top: 20px; 
-    margin-top: 60px; 
+    padding-bottom: 60px;
 }
 section {
     margin-bottom: 20px;
@@ -24,7 +25,7 @@ section h2 {
 
 /*===== Шапка =====*/
 header {
-    background-color: #af4c4c;
+    background-color: #0056b3;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -34,23 +35,30 @@ header {
     z-index: 1000;
 }
 
-/*===== Поиск =====*/ 
+/*===== Поиск =====*/
 .Search {
-    position: relative;
-    text-align: center;
-    padding: 100px;
+    display: flex;
+    justify-content: center;
+    padding: 150px 20px 20px; 
 }
-#search-input {
-    width: 300px;
+#search-input, #search-btn {
     padding: 10px;
+    margin: 0 5px; 
+    border: 2px solid #0056b3;
+    border-radius: 5px; 
 }
 #search-btn {
-    padding: 10px;
-    margin-left: 10px;
+    background-color: #0056b3;
+    color: white;
+    cursor: pointer;
 }
-/*===== Результат =====*/ 
+#search-btn:hover {
+    background-color: #004494;
+}
+/*===== Результаты =====*/
 #results {
     margin-top: 20px;
+    text-align: center;
 }
 
 
