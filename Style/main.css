@@ -1,6 +1,31 @@
-body {
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*===== Шапка =====*/
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
     text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 
@@ -22,13 +47,11 @@ body {
 /*===== Самый низ =====*/ 
 footer {
     background-color: #333;
-    border-radius: 50px;
-    color: #fff;
+    color: white;
     text-align: center;
     padding: 20px 0;
-    position: fixed;
+    width: 100%;
+    position: absolute;
     bottom: 0;
-    left: 50%; /* Центрирование по горизонтали */
-    transform: translateX(-50%); /* Сдвиг на половину ширины футера назад */
-    width: 40%; /* Или 100%, если нужно на всю ширину */
+    left: 0;
 }
