@@ -37,3 +37,11 @@ function displayResults(results) {
         resultsContainer.textContent = 'Ничего не найдено. Попробуйте изменить запрос.';
     }
 }
+
+
+/* Фильтр ключевых слов */
+const filteredData = data.filter(item =>
+    item.keywords.toLowerCase().includes(searchValue) ||
+    item.date.includes(searchValue)
+);
+
