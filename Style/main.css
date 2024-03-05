@@ -1,3 +1,15 @@
+/*=============== Шрифты ===============*/
+@font-face {
+    font-family: 'FontHEAD';
+    src: url('../fonts/') format('truetype');
+    /* ... */
+}
+@font-face {
+    font-family: 'FontMAIN';
+    src: url('../fonts/') format('truetype');
+    /* ... */
+}
+
 /*===== Настройки =====*/
 body, html {
     height: 100%;
@@ -15,12 +27,13 @@ main {
     flex: 1; 
     padding-top: 20px; 
     padding-bottom: 60px;
+    font-family: 'FontMAIN', sans-serif;
 }
 section {
     margin-bottom: 20px;
 }
 section h2 {
-    font-weight: bold; /* Это сделает текст заголовка толстым */
+    font-weight: bold; 
 }
 
 /*===== Шапка =====*/
@@ -33,6 +46,7 @@ header {
     position: fixed;
     top: 0;
     z-index: 1000;
+    font-family: 'FontHEAD', sans-serif; 
 }
 
 /*===== Поиск =====*/
