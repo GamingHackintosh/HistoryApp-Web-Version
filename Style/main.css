@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#search-input {
+    width: 300px;
+    padding: 10px;
+}
+
+#search-btn {
+    padding: 10px;
+}
+
+#results {
+    margin-top: 20px;
+}
