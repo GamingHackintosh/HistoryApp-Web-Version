@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+/*===== Основной блок =====*/ 
 main {
     flex: 1; /* Занимает доступное пространство */
     padding-top: 20px; 
@@ -23,7 +24,7 @@ section h2 {
 
 /*===== Шапка =====*/
 header {
-    background-color: #4CAF50;
+    background-color: #af4c4c;
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -33,22 +34,21 @@ header {
     z-index: 1000;
 }
 
-
+/*===== Поиск =====*/ 
 .Search {
     position: relative;
     text-align: center;
     padding: 100px;
 }
-
 #search-input {
     width: 300px;
     padding: 10px;
 }
-
 #search-btn {
     padding: 10px;
+    margin-left: 10px;
 }
-
+/*===== Результат =====*/ 
 #results {
     margin-top: 20px;
 }
