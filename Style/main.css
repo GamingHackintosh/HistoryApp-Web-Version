@@ -75,7 +75,26 @@ header {
     text-align: center;
 }
 #results div {
-    margin-bottom: 10px; /* Добавляет отступ снизу для каждого div с результатом */
+    margin-bottom: 10px; 
+    
+}
+/*===== Дата =====*/
+.date-text {
+    color: red;
+}
+/* Стиль для закругленного фона даты */
+.date-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px; 
+    background-color: red;
+    color: white;
+    margin-bottom: 5px; 
+}
+/* Стиль для обертки результатов */
+.result-wrapper {
+    text-align: center; 
+    margin-bottom: 15px; 
 }
 
 
