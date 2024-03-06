@@ -1,10 +1,10 @@
 // Обработчик событий при нажатии на кнопку
 document.getElementById('search-btn').addEventListener('click', function() {
     const searchValue = document.getElementById('search-input').value.toLowerCase();
+    // Проверяем, не пустое ли поле поиска
     if (!searchValue.trim()) {
-        // Если поле поиска пустое, отображаем сообщение об ошибке
-        alert("Поле пусто");
-        return; // Останавливаем дальнейшую обработку функции
+        alert("Поле пусто"); // Можно заменить alert на другой способ уведомления пользователя
+        return; // Прерываем выполнение функции, если поле пусто
     }
     
     // Проверяем, что введенное значение не является только годом
@@ -29,7 +29,7 @@ document.getElementById('search-btn').addEventListener('click', function() {
         });
 });
 
-
+// Обработчик событий для появления результата
 function displayResults(results) {
     const resultsContainer = document.getElementById('results');
     resultsContainer.innerHTML = '';
@@ -68,3 +68,19 @@ const filteredData = data.filter(item =>
     item.date.includes(searchValue)
 );
 
+
+// Автоматическое переключения слайдов
+document.addEventListener('DOMContentLoaded', function() {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    function nextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % totalSlides;
+        slides[currentSlide].classList.add('active');
+    }
+
+    // Переключение каждые 5 секунд
+    setInterval(nextSlide, 5000);
+});

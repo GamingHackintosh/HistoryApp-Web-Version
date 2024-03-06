@@ -15,7 +15,7 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: #ffffff;
+    background: #434242;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
@@ -59,7 +59,7 @@ header {
     padding: 10px;
     margin: 0 5px; 
     border: 2px solid #0056b3;
-    border-radius: 5px; 
+    border-radius: 15px; 
 }
 #search-btn {
     background-color: #0056b3;
@@ -96,6 +96,34 @@ header {
     text-align: center; 
     margin-bottom: 15px; 
 }
+
+
+/*===== Слайдер с событиями =====*/
+.slider {
+    width: 100%;
+    overflow: hidden;
+}
+.slide {
+    display: flex; /* Используйте flexbox для выравнивания изображения и текста */
+    align-items: center; /* Центрирует элементы по вертикали */
+    justify-content: space-around; /* Распределяет пространство вокруг элементов */
+    opacity: 0;
+    transition: opacity 1s;
+    padding: 20px; /* Добавьте отступ для внутреннего содержимого слайда */
+}
+.slide.active {
+    opacity: 1;
+}
+.image-container img {
+    max-width: 40%; /* Уменьшите изображение до 40% от ширины слайда */
+    border-radius: 10px; /* Добавьте немного закругления к краям изображения */
+}
+.description {
+    max-width: 50%; /* Ограничьте ширину описания 50% от ширины слайда */
+    text-align: justify; /* Выровняйте текст по ширине */
+    padding: 10px; /* Добавьте отступ для текста */
+}
+
 
 
 
