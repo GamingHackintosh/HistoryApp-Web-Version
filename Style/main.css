@@ -104,9 +104,10 @@ header {
     overflow: hidden;
 }
 .slide {
-    display: flex; /* Используйте flexbox для выравнивания изображения и текста */
-    align-items: center; /* Центрирует элементы по вертикали */
-    justify-content: space-around; /* Распределяет пространство вокруг элементов */
+    display: flex; /* Измените на flex для вертикальной ориентации */
+    flex-direction: column; /* Элементы теперь будут располагаться вертикально */
+    align-items: center; /* Центрирование элементов по горизонтали */
+    text-align: center; /* Центрирование текста */
     opacity: 0;
     transition: opacity 1s;
     padding: 20px; /* Добавьте отступ для внутреннего содержимого слайда */
@@ -115,13 +116,18 @@ header {
     opacity: 1;
 }
 .image-container img {
-    max-width: 40%; /* Уменьшите изображение до 40% от ширины слайда */
-    border-radius: 10px; /* Добавьте немного закругления к краям изображения */
+    max-width: 30%; /* Поиграйте с размерами, чтобы найти оптимальный размер для изображений */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.DescContainer {
+    margin: 0 auto;
+    width: 30%;
 }
 .description {
-    max-width: 50%; /* Ограничьте ширину описания 50% от ширины слайда */
-    text-align: justify; /* Выровняйте текст по ширине */
-    padding: 10px; /* Добавьте отступ для текста */
+    max-width: 100%; 
+    padding: 10px; 
+    color: #fff;
 }
 
 
