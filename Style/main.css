@@ -15,8 +15,9 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: #434242;
+    background: #121212; /* Темный фон */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0; /* Светлый текст */
 }
 body {
     display: flex;
@@ -38,28 +39,30 @@ section h2 {
 
 /*===== Шапка =====*/
 header {
-    background-color: #707170;
+    background-color: #333;
     color: white;
     padding: 20px 0;
     text-align: center;
     width: 100%;
-    position: fixed;
+    position: relative;
     top: 0;
     z-index: 1000;
-    font-family: 'FontHEAD', sans-serif; 
+    font-family: 'FontHEAD', sans-serif;
 }
 
 /*===== Поиск =====*/
 .Search {
     display: flex;
     justify-content: center;
-    padding: 150px 20px 20px; 
+    padding: 10px;
 }
 #search-input, #search-btn {
     padding: 10px;
-    margin: 0 5px; 
+    margin: 0 5px;
     border: 2px solid #0056b3;
-    border-radius: 15px; 
+    border-radius: 15px;
+    background-color: #333; /* Темный фон для элементов формы */
+    color: #fff; /* Светлый текст */
 }
 #search-btn {
     background-color: #0056b3;
@@ -72,7 +75,9 @@ header {
 /*===== Результаты =====*/
 #results {
     margin-top: 20px;
+    margin-bottom: 30px;
     text-align: center;
+    color: #fff;
 }
 #results div {
     margin-bottom: 10px; 
@@ -99,26 +104,46 @@ header {
 
 
 /*===== Слайдер с событиями =====*/
-.slider {
+.sliders-container {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #333;
+    border-radius: 180px;
+}
+.sliders-container h2 {
     width: 100%;
-    overflow: hidden;
+    text-align: center;
+    color: #FFFFFF; /* Или другой цвет, который хорошо виден на темном фоне */
+    margin-bottom: 50px; /* Отступ снизу, чтобы отделить заголовок от слайдеров */
+}
+
+.slider {
+    margin: 0 10px;
+}
+.slidersALL {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 .slide {
-    display: flex; /* Измените на flex для вертикальной ориентации */
-    flex-direction: column; /* Элементы теперь будут располагаться вертикально */
-    align-items: center; /* Центрирование элементов по горизонтали */
-    text-align: center; /* Центрирование текста */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
     opacity: 0;
     transition: opacity 1s;
-    padding: 20px; /* Добавьте отступ для внутреннего содержимого слайда */
 }
 .slide.active {
     opacity: 1;
 }
 .image-container img {
-    max-width: 30%; /* Поиграйте с размерами, чтобы найти оптимальный размер для изображений */
+    max-width: 50%;
     border-radius: 10px;
     margin-bottom: 20px;
+}
+.DescContainer, .description, .Year {
+    color: #e0e0e0; /* Светлый текст для описаний и дат */
 }
 .DescContainer {
     margin: 0 auto;
@@ -127,7 +152,12 @@ header {
 .description {
     max-width: 100%; 
     padding: 10px; 
-    color: #fff;
+}
+.description p {
+    font-size: 20px;
+}
+.Year p {
+    font-size: 20px;
 }
 
 
@@ -135,7 +165,7 @@ header {
 
 /*===== Самый низ =====*/ 
 footer {
-    background-color: #707170;
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 20px 0;
