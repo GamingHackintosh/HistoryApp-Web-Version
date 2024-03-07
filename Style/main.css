@@ -50,6 +50,14 @@ header {
     font-family: 'FontHEAD', sans-serif;
 }
 
+
+/*===== Первый блок (в начале) =====*/
+.block1 {
+
+}
+
+
+
 /*===== Поиск =====*/
 .Search {
     display: flex;
@@ -103,12 +111,30 @@ header {
 }
 
 
+
+
+
 /*===== Слайдер с событиями =====*/
 .sliders-container {
+    position: relative;
+    background-image: url("../photo/background1.webp");
     padding: 20px;
-    background-color: #242424;
-    border-radius: 15px;
+    border-radius: 30px;
     text-align: center;
+    overflow: hidden;
+    font-family: 'Vezitsa', arial;
+    font-size: 24px;
+    text-shadow: 4px 4px 4px #aaa;
+}
+.sliders-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный слой */
+    border-radius: 30px; /* Согласование с радиусом границы контейнера */
 }
 .sliders-container h2 {
     width: 100%;
@@ -131,6 +157,10 @@ header {
     align-items: center;
     flex-wrap: nowrap;
 }
+.slide, .slider, .DescContainer, .description, .Year {
+    position: relative;
+    z-index: 1;
+}
 .slide {
     display: flex; 
     flex-direction: column; 
@@ -148,7 +178,7 @@ header {
     margin-bottom: 20px;
 }
 .DescContainer, .description, .Year {
-    color: #e0e0e0; /* Светлый текст для описаний и дат */
+    color: #e0e0e0; 
 }
 .DescContainer {
     margin: 0 auto;
