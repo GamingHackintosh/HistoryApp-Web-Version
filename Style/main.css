@@ -59,7 +59,7 @@ header {
 #search-input, #search-btn {
     padding: 10px;
     margin: 0 5px;
-    border: 2px solid #0056b3;
+    border: 1px solid #555555;  
     border-radius: 15px;
     background-color: #333; /* Темный фон для элементов формы */
     color: #fff; /* Светлый текст */
@@ -70,7 +70,7 @@ header {
     cursor: pointer;
 }
 #search-btn:hover {
-    background-color: #004494;
+    background-color: #555555;
 }
 /*===== Результаты =====*/
 #results {
@@ -105,16 +105,20 @@ header {
 
 /*===== Слайдер с событиями =====*/
 .sliders-container {
+    padding: 20px;
+    background-color: #242424;
+    border-radius: 15px;
     text-align: center;
-    padding: 50px 0;
-    background-color: #333;
-    border-radius: 180px;
 }
 .sliders-container h2 {
     width: 100%;
     text-align: center;
-    color: #FFFFFF; /* Или другой цвет, который хорошо виден на темном фоне */
-    margin-bottom: 50px; /* Отступ снизу, чтобы отделить заголовок от слайдеров */
+    color: #FFFFFF;
+    margin-bottom: 50px; 
+}
+
+.title-container {
+    margin-bottom: 30px; 
 }
 
 .slider {
@@ -154,6 +158,9 @@ header {
     max-width: 100%; 
     padding: 10px; 
 }
+.description, .Year {
+    color: #FFFFFF;
+}
 .description p {
     font-size: 20px;
 }
@@ -166,7 +173,7 @@ header {
 
 /*===== Самый низ =====*/ 
 footer {
-    background-color: #333;
+    background-color: #333333;
     color: white;
     text-align: center;
     padding: 20px 0;
