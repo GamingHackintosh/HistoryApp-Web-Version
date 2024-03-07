@@ -59,9 +59,6 @@ function displayResults(results) {
     }
 }
 
-
-
-
 /* Фильтр ключевых слов */
 const filteredData = data.filter(item =>
     item.keywords.toLowerCase().includes(searchValue) ||
@@ -69,18 +66,49 @@ const filteredData = data.filter(item =>
 );
 
 
-// Автоматическое переключения слайдов
-document.addEventListener('DOMContentLoaded', function() {
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    const totalSlides = slides.length;
 
-    function nextSlide() {
-        slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % totalSlides;
-        slides[currentSlide].classList.add('active');
+// Сайдбар
+const centuriesData = {
+    'VIII': [{'date': '720', 'event': 'Событие 1 в VIII веке'}, {'date': '725', 'event': 'Событие 2 в VIII веке'}],
+    'IX': [{'date': '810', 'event': 'Событие 1 в IX веке'}],
+    'X': [{'date': '950', 'event': 'Событие 1 в X веке'}],
+    // Добавьте дополнительные данные по аналогии
+};
+document.addEventListener('DOMContentLoaded', function() {
+    const sidebarElement = document.querySelector('.SideBar');
+    const ul = document.createElement('ul');
+    ul.id = 'centuries';
+
+    for (let century in centuriesData) {
+        const li = document.createElement('li');
+        li.textContent = century + ' век';
+        li.onclick = function() { displayEventsForCentury(century); };
+        ul.appendChild(li);
     }
 
-    // Переключение каждые 5 секунд
-    setInterval(nextSlide, 5000);
+    sidebarElement.appendChild(ul);
 });
+
+function initSidebar() {
+    const centuriesElement = document.getElementById('centuries');
+    centuries.forEach(century => {
+        const li = document.createElement('li');
+        li.textContent = century + ' век';
+        li.addEventListener('click', () => displayEventsForCentury(century));
+        centuriesElement.appendChild(li);
+    });
+}
+
+function displayEventsForCentury(century) {
+    const events = centuriesData[century];
+    const resultsElement = document.getElementById('results');
+    resultsElement.innerHTML = ''; // Очистить текущие события
+
+    events.forEach(event => {
+        const eventElement = document.createElement('div');
+        eventElement.textContent = `${event.date}: ${event.event}`;
+        resultsElement.appendChild(eventElement);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', initSidebar);
