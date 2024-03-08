@@ -300,6 +300,10 @@ footer {
     body {
         font-size: 14px; 
     }
+    
+    .slidersALL {
+        display: block;
+    }
 }
 
 /* Стили для планшетов */
