@@ -29,15 +29,15 @@ body {
 /*===== Основной блок =====*/ 
 main {
     flex: 1;
-    font-family: 'FontMAIN', sans-serif;
     transition: padding-left 0.3s ease;
-    padding-left: 0;
+    background-image: url("../photo/ALLbackground`s/background1.jpg") ;
 }
 section {
     margin-bottom: 20px;
 }
 section h2 {
     font-weight: bold; 
+    
 }
 
 /*===== Шапка =====*/
@@ -52,6 +52,7 @@ header {
     z-index: 1000;
     font-family: 'FontHEAD', sans-serif;
 }
+
 
 /*===== Боковая навигация с датами (Sidebar) =====*/
 .menu {
@@ -168,14 +169,12 @@ header {
 /*===== Слайдер с событиями =====*/
 .sliders-container {
     position: relative;
-    background-image: url("../photo/ALLbackground`s/background1.webp");
     padding: 20px;
     border-radius: 30px;
     text-align: center;
     overflow: hidden;
     font-family: 'Vezitsa', arial;
     font-size: 24px;
-    text-shadow: 4px 4px 4px #aaa;
 }
 .sliders-container::before {
     content: "";
