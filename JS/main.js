@@ -68,48 +68,65 @@ const filteredData = data.filter(item =>
 
 
 // Сайдбар
-// Элементы для бокового меню и кнопки переключения
-const sidebar = document.getElementById('sidebar');
-const toggleButton = document.getElementById('toggle-sidebar');
-const closeButton = document.getElementById('close-sidebar');
 
-// Добавляем слушатели событий на кнопки для управления sidebar
-toggleButton.addEventListener('click', () => {
-    sidebar.classList.toggle('active');
-});
+// Функция для преобразования года в век
+function yearToCentury(year) {
+    return Math.ceil(year / 100);
+}
 
-closeButton.addEventListener('click', () => {
-    sidebar.classList.remove('active');
-});
+// Функция для отображения событий по веку
+function displayEventsForCentury(century) {
+    fetch('<path-to-data.json>') // Replace with the actual path to your data.json file
+    .then(response => response.json())
+    .then(data => {
+        // Filter events for the selected century
+        const eventsForCentury = data.filter(event => yearToCentury(event.date) === century);
+        // Display the events for the selected century
+        displayResults(eventsForCentury);
+    })
+    .catch(error => console.error('Ошибка при загрузке данных: ', error));
+}
 
-// Функция для заполнения sidebar веками и датами
-function populateSidebar(centuriesData) {
-    const menu = document.getElementById('centuries');
-    // Очищаем меню перед добавлением новых элементов
-    menu.innerHTML = '';
+// Функция для отображения результатов в контейнере результатов
+function displayResults(results) {
+    const resultsContainer = document.getElementById('results');
+    resultsContainer.innerHTML = ''; // Clear previous results
 
-    centuriesData.forEach(century => {
-        // Создаем элемент списка для века
-        const centuryLi = document.createElement('li');
-        centuryLi.textContent = century.name;
-        menu.appendChild(centuryLi);
+    results.forEach(item => {
+        const resultWrapper = document.createElement('div');
+        resultWrapper.className = 'result-wrapper';
 
-        // Добавляем события при клике на век
-        centuryLi.addEventListener('click', () => {
-            // Здесь будет ваш код для отображения событий данного века
-            // Например, вызов функции displayEvents(century.events);
-        });
+        const dateBadge = document.createElement('div');
+        dateBadge.className = 'date-badge';
+        dateBadge.textContent = item.date;
+        resultWrapper.appendChild(dateBadge);
+
+        const eventDescription = document.createElement('div');
+        eventDescription.textContent = item.event;
+        resultWrapper.appendChild(eventDescription);
+
+        resultsContainer.appendChild(resultWrapper);
     });
 }
 
-// Пример данных
-const centuriesData = [
-    { name: 'XVIII век', events: [...] },
-    { name: 'XIX век', events: [...] }
-    // ...
-];
+// Заполнение sidebar веками после загрузки DOM
+document.addEventListener('DOMContentLoaded', function() {
+    const centuries = [9, 10, 11, 12]; // Use your actual centuries list here
+    const sidebar = document.querySelector('.menu .list_menu ul'); // Adjust if necessary
+    sidebar.innerHTML = '';
 
-// Вызываем функцию для заполнения данных
-populateSidebar(centuriesData);
+    centuries.forEach(century => {
+        const listItem = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = '#';
+        link.textContent = `${century} Век`;
+        listItem.appendChild(link);
+        sidebar.appendChild(listItem);
 
-// Сайдбар
+        // Добавление обработчика кликов на элемент списка
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            displayEventsForCentury(century);
+        });
+    });
+});

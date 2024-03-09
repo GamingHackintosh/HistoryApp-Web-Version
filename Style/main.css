@@ -22,7 +22,6 @@ body, html {
 body {
     display: flex;
     flex-direction: column;
-    background: url('../photo/ALLbackground`s/background1.webp"') no-repeat center center fixed;
     background-size: cover;
     color: #dcd0c0; /* A readable color against the background */
     text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
@@ -30,13 +29,9 @@ body {
 /*===== Основной блок =====*/ 
 main {
     flex: 1;
-    padding-top: 20px;
-    padding-bottom: 60px;
     font-family: 'FontMAIN', sans-serif;
-}
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
+    transition: padding-left 0.3s ease;
+    padding-left: 0;
 }
 section {
     margin-bottom: 20px;
@@ -58,13 +53,54 @@ header {
     font-family: 'FontHEAD', sans-serif;
 }
 
-/*===== Боковая навигация с датами =====*/
-/* Стили для sidebar */
-
-
-
-
-
+/*===== Боковая навигация с датами (Sidebar) =====*/
+.menu {
+    padding: 25vh 50px;
+    background: rgba(20, 20, 20, 0.5);
+    height: 100vh;
+    border-right: 7px solid #fcfffc;
+    position: fixed;
+    left: -346px; /* Изначально скрыт за пределами экрана */
+    transition: left 0.5s ease;
+    z-index: 1000;
+}
+.menu:hover{
+    left: 0; /* Показывает сайдбар при наведении */
+}
+.content-wrapper {
+    transition: margin-left 0.5s ease;
+}
+.menu:hover + .content-wrapper {
+    margin-left: 396px; /* Увеличивает отступ, когда сайдбар появляется */
+}
+.title h1 {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 40px;
+    color: #fcfffc;
+    margin-bottom: 50px;
+}
+.list_menu a {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 25px;
+    color: #fcfffc;
+    border-left: 2px solid #F5B7C7;
+    transition: 0.2s ease;
+    padding-left: 5px;
+}
+.list_menu a:hover {
+    border-left: 2px solid #F5B7C7;
+    transition: 0.2s ease;
+    padding-left: 10px;
+}
+.list_menu li {
+    margin: 20px 0;
+}
+.footer_menu p {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 15px;
+    color: #fcfffc;
+    opacity: 0.7;
+}
 
 
 
@@ -224,7 +260,7 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 20px 0;
-    width: 100%;
+    width: 100vw;
 }
 
 
