@@ -34,7 +34,7 @@ body {
 main {
     flex: 1;
     transition: padding-left 0.3s ease;
-    background-image: url("../photo/ALLbackground`s/background1.jpg") ;
+    background-image: url("../photo/ALLbackground`s/abstract-old-grunge-stone-textures.jpg") ;
 }
 section {
     margin-bottom: 20px;
@@ -62,7 +62,7 @@ header {
 .menu {
     padding: 25vh 50px;
     background: rgba(20, 20, 20, 0.9);
-    height: 40vh;
+    height: 50vh;
     border-right: 15px solid #fcfffc;
     position: fixed;
     left: -350px; /* Изначально скрыт за пределами экрана */
@@ -193,7 +193,7 @@ header {
 .sliders-container h2 {
     width: 100%;
     text-align: center;
-    color: #66e9fd;
+    color: #ffffff;
     margin-bottom: 50px; 
 }
 
