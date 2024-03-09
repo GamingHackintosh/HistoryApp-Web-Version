@@ -76,56 +76,42 @@ function yearToCentury(year) {
 
 // Функция для отображения событий по веку
 function displayEventsForCentury(century) {
-    fetch('<path-to-data.json>') // Replace with the actual path to your data.json file
+    fetch('../data.json') // Указываем правильный путь к файлу data.json
     .then(response => response.json())
     .then(data => {
-        // Filter events for the selected century
-        const eventsForCentury = data.filter(event => yearToCentury(event.date) === century);
-        // Display the events for the selected century
+        // Фильтруем события для выбранного века
+        const eventsForCentury = data.filter(event => {
+            const year = parseInt(event.date.split(' ')[0]);
+            return yearToCentury(year) === century;
+        });
+        // Отображаем события для выбранного века
         displayResults(eventsForCentury);
     })
     .catch(error => console.error('Ошибка при загрузке данных: ', error));
 }
 
 // Функция для отображения результатов в контейнере результатов
-function displayResults(results) {
+function displayResults(events) {
     const resultsContainer = document.getElementById('results');
-    resultsContainer.innerHTML = ''; // Clear previous results
+    resultsContainer.innerHTML = ''; // Очищаем предыдущие результаты
 
-    results.forEach(item => {
-        const resultWrapper = document.createElement('div');
-        resultWrapper.className = 'result-wrapper';
-
-        const dateBadge = document.createElement('div');
-        dateBadge.className = 'date-badge';
-        dateBadge.textContent = item.date;
-        resultWrapper.appendChild(dateBadge);
-
-        const eventDescription = document.createElement('div');
-        eventDescription.textContent = item.event;
-        resultWrapper.appendChild(eventDescription);
-
-        resultsContainer.appendChild(resultWrapper);
+    events.forEach(event => {
+        const eventElement = document.createElement('div');
+        eventElement.className = 'event';
+        eventElement.innerHTML = `<h4>${event.date}</h4><p>${event.event}</p>`;
+        resultsContainer.appendChild(eventElement);
     });
 }
 
-// Заполнение sidebar веками после загрузки DOM
+// Устанавливаем обработчики событий на клики по ссылкам веков после загрузки DOM
 document.addEventListener('DOMContentLoaded', function() {
-    const centuries = [9, 10, 11, 12]; // Use your actual centuries list here
-    const sidebar = document.querySelector('.menu .list_menu ul'); // Adjust if necessary
-    sidebar.innerHTML = '';
+    const centuryLinks = document.querySelectorAll('.list_menu a');
 
-    centuries.forEach(century => {
-        const listItem = document.createElement('li');
-        const link = document.createElement('a');
-        link.href = '#';
-        link.textContent = `${century} Век`;
-        listItem.appendChild(link);
-        sidebar.appendChild(listItem);
-
-        // Добавление обработчика кликов на элемент списка
-        link.addEventListener('click', (e) => {
+    centuryLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
             e.preventDefault();
+            const centuryText = link.textContent;
+            const century = parseInt(centuryText.match(/\d+/)[0]); // Извлекаем число века
             displayEventsForCentury(century);
         });
     });

@@ -1,3 +1,7 @@
+* {
+    list-style: none;
+    text-decoration: none;
+}
 /*=============== Шрифты ===============*/
 @font-face {
     font-family: 'FontHEAD';
@@ -57,11 +61,11 @@ header {
 /*===== Боковая навигация с датами (Sidebar) =====*/
 .menu {
     padding: 25vh 50px;
-    background: rgba(20, 20, 20, 0.5);
-    height: 100vh;
-    border-right: 7px solid #fcfffc;
+    background: rgba(20, 20, 20, 0.9);
+    height: 40vh;
+    border-right: 15px solid #fcfffc;
     position: fixed;
-    left: -346px; /* Изначально скрыт за пределами экрана */
+    left: -350px; /* Изначально скрыт за пределами экрана */
     transition: left 0.5s ease;
     z-index: 1000;
 }
@@ -183,13 +187,13 @@ header {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный слой */
+    background: rgba(0, 0, 0, 0.45); /* Полупрозрачный черный слой */
     border-radius: 30px; /* Согласование с радиусом границы контейнера */
 }
 .sliders-container h2 {
     width: 100%;
     text-align: center;
-    color: #FFFFFF;
+    color: #66e9fd;
     margin-bottom: 50px; 
 }
 
