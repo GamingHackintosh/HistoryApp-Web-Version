@@ -56,3 +56,7 @@
 ## Благодарности
 
 Благодарим всех, кто внесет вклад в разработку и поддержку этого проекта.
+
+
+<img src="photo/readmePhoto/MainReadme.png">
+<img src="photo/readmePhoto/navReadme.png">

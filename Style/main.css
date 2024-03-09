@@ -19,9 +19,9 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: #121212; /* Темный фон */
+    background: #121212;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #e0e0e0; /* Светлый текст */
+    color: #e0e0e0; 
 }
 body {
     display: flex;
@@ -29,12 +29,12 @@ body {
     background-size: cover;
     color: #dcd0c0; /* A readable color against the background */
     text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+    background-image: url("../photo/ALLbackground`s/background.webp") ;
 }
 /*===== Основной блок =====*/ 
 main {
     flex: 1;
     transition: padding-left 0.3s ease;
-    background-image: url("../photo/ALLbackground`s/abstract-old-grunge-stone-textures.jpg") ;
 }
 section {
     margin-bottom: 20px;
@@ -50,11 +50,15 @@ header {
     color: white;
     padding: 20px 0;
     text-align: center;
-    width: 100%;
     position: relative;
     top: 0;
     z-index: 1000;
     font-family: 'FontHEAD', sans-serif;
+    bottom: 0;
+    width: 60%; 
+    margin: 1rem auto;
+    border-radius: 100px;
+    border: 1px solid #1a1a1a;
 }
 
 
@@ -63,7 +67,7 @@ header {
     padding: 25vh 50px;
     background: rgba(20, 20, 20, 0.9);
     height: 50vh;
-    border-right: 15px solid #fcfffc;
+    border-right: 20px solid #fcfffc;
     position: fixed;
     left: -350px; /* Изначально скрыт за пределами экрана */
     transition: left 0.5s ease;
@@ -107,14 +111,6 @@ header {
     opacity: 0.7;
 }
 
-
-
-
-
-/*===== Первый блок (в начале) =====*/
-.block1 {
-
-}
 
 
 
@@ -257,13 +253,25 @@ header {
 
 /*===== Самый низ =====*/ 
 footer {
-    background-color: #333;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0;
-    width: 100vw;
+    background: #333;
+    color: #E0E0E0;
+    text-align: center;
+    padding: 30px 10px;
+    position: relative;
+    bottom: 0;
+    width: 60%; 
+    margin: 1rem auto;
+    border-radius: 100px;
+    border: 1px solid #1a1a1a;
+}
+
+footer h2, footer h3, footer p {
+    color: #ffffff;
+}
+
+footer a {
+    color: #E0E0E0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 
