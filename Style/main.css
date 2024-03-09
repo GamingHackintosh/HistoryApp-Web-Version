@@ -59,43 +59,8 @@ header {
 }
 
 /*===== Боковая навигация с датами =====*/
-/* Основные стили для Sidebar */
-.sidebar {
-    width: 250px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background-color: #f0f0f0;
-    overflow-y: auto;
-    padding: 20px;
-    box-shadow: 2px 0px 5px rgba(0,0,0,0.5);
-}
+/* Стили для sidebar */
 
-/* Стилизация списка веков в Sidebar */
-#centuries {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#centuries li {
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: #e9e9e9;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-#centuries li:hover {
-    background-color: #d9d9d9;
-}
-
-/* Стили для секции событий */
-.events {
-    margin-left: 270px; /* Сдвигаем контент, чтобы не перекрывался Sidebar */
-    padding: 20px;
-}
 
 
 
@@ -145,15 +110,12 @@ header {
     margin-bottom: 10px; 
 }
 /*===== Дата =====*/
-.date-text {
-    color: red;
-}
 /* Стиль для закругленного фона даты */
 .date-badge {
     display: inline-block;
     padding: 5px 10px;
     border-radius: 15px; 
-    background-color: red;
+    background-color: rgb(140, 0, 0);
     color: white;
     margin-bottom: 5px; 
 }
@@ -283,9 +245,18 @@ footer {
         padding: 100px 10px 10px; 
     }
 
+
     #search-input, #search-btn {
         padding: 8px; 
         font-size: 14px; 
+    }
+
+    #sidebar {
+        width: 100%;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
     }
 
     main {
@@ -305,6 +276,18 @@ footer {
         display: block;
     }
 }
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* На маленьких экранах sidebar будет на всю ширину */
+      }
+      
+      #content.shift {
+        margin-left: 0; /* На маленьких экранах не сдвигаем содержимое */
+      }
+    }
+
 
 /* Стили для планшетов */
 @media (min-width: 601px) and (max-width: 1024px) {

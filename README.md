@@ -33,9 +33,11 @@
 
 1. Клонировать репозиторий на свой компьютер.
 
-  1.1. Открыть файл `index.html` в браузере.
+1.1. Открыть файл `index.html` в браузере.
 
-1. Перейти по ссылке [https://gaminghackintosh.github.io/HistoryApp-Web-Version/]
+ИЛИ
+
+2. [Перейти по ссылке](https://gaminghackintosh.github.io/HistoryApp-Web-Version/)
 
 ## Вклад в проект
 

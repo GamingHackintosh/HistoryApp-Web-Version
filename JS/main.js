@@ -68,47 +68,48 @@ const filteredData = data.filter(item =>
 
 
 // Сайдбар
-const centuriesData = {
-    'VIII': [{'date': '720', 'event': 'Событие 1 в VIII веке'}, {'date': '725', 'event': 'Событие 2 в VIII веке'}],
-    'IX': [{'date': '810', 'event': 'Событие 1 в IX веке'}],
-    'X': [{'date': '950', 'event': 'Событие 1 в X веке'}],
-    // Добавьте дополнительные данные по аналогии
-};
-document.addEventListener('DOMContentLoaded', function() {
-    const sidebarElement = document.querySelector('.SideBar');
-    const ul = document.createElement('ul');
-    ul.id = 'centuries';
+// Элементы для бокового меню и кнопки переключения
+const sidebar = document.getElementById('sidebar');
+const toggleButton = document.getElementById('toggle-sidebar');
+const closeButton = document.getElementById('close-sidebar');
 
-    for (let century in centuriesData) {
-        const li = document.createElement('li');
-        li.textContent = century + ' век';
-        li.onclick = function() { displayEventsForCentury(century); };
-        ul.appendChild(li);
-    }
-
-    sidebarElement.appendChild(ul);
+// Добавляем слушатели событий на кнопки для управления sidebar
+toggleButton.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
 });
 
-function initSidebar() {
-    const centuriesElement = document.getElementById('centuries');
-    centuries.forEach(century => {
-        const li = document.createElement('li');
-        li.textContent = century + ' век';
-        li.addEventListener('click', () => displayEventsForCentury(century));
-        centuriesElement.appendChild(li);
+closeButton.addEventListener('click', () => {
+    sidebar.classList.remove('active');
+});
+
+// Функция для заполнения sidebar веками и датами
+function populateSidebar(centuriesData) {
+    const menu = document.getElementById('centuries');
+    // Очищаем меню перед добавлением новых элементов
+    menu.innerHTML = '';
+
+    centuriesData.forEach(century => {
+        // Создаем элемент списка для века
+        const centuryLi = document.createElement('li');
+        centuryLi.textContent = century.name;
+        menu.appendChild(centuryLi);
+
+        // Добавляем события при клике на век
+        centuryLi.addEventListener('click', () => {
+            // Здесь будет ваш код для отображения событий данного века
+            // Например, вызов функции displayEvents(century.events);
+        });
     });
 }
 
-function displayEventsForCentury(century) {
-    const events = centuriesData[century];
-    const resultsElement = document.getElementById('results');
-    resultsElement.innerHTML = ''; // Очистить текущие события
+// Пример данных
+const centuriesData = [
+    { name: 'XVIII век', events: [...] },
+    { name: 'XIX век', events: [...] }
+    // ...
+];
 
-    events.forEach(event => {
-        const eventElement = document.createElement('div');
-        eventElement.textContent = `${event.date}: ${event.event}`;
-        resultsElement.appendChild(eventElement);
-    });
-}
+// Вызываем функцию для заполнения данных
+populateSidebar(centuriesData);
 
-document.addEventListener('DOMContentLoaded', initSidebar);
+// Сайдбар
