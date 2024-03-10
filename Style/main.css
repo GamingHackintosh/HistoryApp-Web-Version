@@ -246,6 +246,7 @@ header {
 .DescContainer {
     margin: 0 auto;
     width: 30%;
+    font-weight: bold;
 }
 .description {
     max-width: 100%; 
@@ -299,7 +300,13 @@ footer a {
     header, footer {
         padding: 10px 0; 
     }
-    
+
+    body {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top left;
+    }
+
     .Search {
         padding: 30px 10px 10px; 
     }
