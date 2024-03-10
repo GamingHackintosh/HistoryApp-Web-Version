@@ -76,11 +76,11 @@ function yearToCentury(year) {
 
 // Функция для отображения событий по ключевому слову века
 function displayEventsForKeyword(keyword) {
-    fetch('data.json') // Убедитесь, что путь к data.json корректен
+    fetch('..//data.json') // Убедитесь, что путь к data.json корректен
     .then(response => response.json())
     .then(data => {
         // Фильтруем события, содержащие ключевое слово в свойстве keywords
-        const eventsForKeyword = data.filter(event => event.keywords.toLowerCase().includes(keyword));
+        const eventsForKeyword = data.filter(event => event.keywords.includes(keyword));
         // Отображаем события, соответствующие ключевому слову
         displayResults(eventsForKeyword);
     })
@@ -108,10 +108,8 @@ document.addEventListener('DOMContentLoaded', function() {
     centuryLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            const centuryText = link.textContent.trim();
-            // Преобразуем текст в нижний регистр и добавляем 'век' для точного совпадения с ключевыми словами
-            const keyword = `${centuryText.toLowerCase()} век`;
-            displayEventsForKeyword(keyword);
+            const centuryText = link.getAttribute('data-century').trim() + "век"; // Получаем значение data-century и добавляем "век"
+            displayEventsForKeyword(centuryText);
         });
     });
 });
