@@ -19,7 +19,6 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: #121212;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #e0e0e0; 
 }
@@ -246,7 +245,7 @@ header {
 .DescContainer {
     margin: 0 auto;
     width: 30%;
-    font-weight: bold;
+    font-weight: semi bold;
 }
 .description {
     max-width: 100%; 
@@ -300,13 +299,13 @@ footer a {
     header, footer {
         padding: 10px 0; 
     }
-
     body {
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: top left;
+        background-position: center center; /* Центрирует изображение по вертикали и горизонтали */
+        background-attachment: fixed; /* Фиксирует фоновое изображение при прокрутке */
+        background-image: url("../photo/ALLbackground`s/backgroundMobile.webp");
     }
-
     .Search {
         padding: 30px 10px 10px; 
     }
