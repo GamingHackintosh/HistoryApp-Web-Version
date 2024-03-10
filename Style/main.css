@@ -99,12 +99,12 @@ header {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 25px;
     color: #fcfffc;
-    border-left: 2px solid #F5B7C7;
+    border-left: 2px solid #906652;
     transition: 0.2s ease;
     padding-left: 5px;
 }
 .list_menu a:hover {
-    border-left: 2px solid #F5B7C7;
+    border-left: 2px solid #ff0000;
     transition: 0.2s ease;
     padding-left: 10px;
 }
@@ -127,22 +127,36 @@ header {
     justify-content: center;
     padding: 10px;
 }
-#search-input, #search-btn {
-    padding: 10px;
-    margin: 0 5px;
-    border: 1px solid #555555;  
-    border-radius: 15px;
-    background-color: #333; /* Темный фон для элементов формы */
-    color: #fff; /* Светлый текст */
+#search-input {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border: 2px solid #555;  
+    border-radius: 25px;
+    background-color: transparent;
+    color: #fff;
+    outline: none; 
+    transition: border-color 0.3s ease-in-out;
 }
+
 #search-btn {
-    background-color: #0056b3;
-    color: white;
+    padding: 10px 15px;
+    border: 2px solid #007BFF; 
+    background-color: #007BFF; 
+    color: #fff;
+    border-radius: 25px;
     cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none; 
 }
-#search-btn:hover {
-    background-color: #555555;
+#search-btn:hover, #search-btn:focus {
+    background-color: #0056b3; 
+    border-color: #0056b3; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
+#search-input:focus {
+    border-color: #007BFF; 
+}
+
 /*===== Результаты =====*/
 #results {
     margin-top: 20px;
@@ -178,14 +192,14 @@ header {
 
 /*===== Слайдер с событиями =====*/
 .sliders-container {
-    position: relative;
+    background: rgba(0, 0, 0, 0.6); /* Уменьшение прозрачности */
+    border-radius: 15px; /* Мягкие края */
     padding: 20px;
-    border-radius: 30px;
-    text-align: center;
-    overflow: hidden;
-    font-family: 'Vezitsa', arial;
-    font-size: 24px;
+    font-family: 'Vezitsa', Arial, sans-serif;
+    font-size: 20px; /* Меньший размер шрифта для большей читаемости */
+    color: #ffffff; /* Белый цвет текста для лучшей видимости */
 }
+
 .sliders-container::before {
     content: "";
     position: absolute;
