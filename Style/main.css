@@ -159,16 +159,15 @@ header {
 
 /*===== Результаты =====*/
 #results {
-    margin-top: 20px;
     margin-bottom: 30px;
     text-align: center;
     color: #fff;
     background: rgba(0, 0, 0, 0.45);
     border-radius: 30px;
-    padding: 10px;
 }
 #results div {
     margin-bottom: 10px; 
+    
 }
 /*===== Дата =====*/
 /* Стиль для закругленного фона даты */
@@ -203,10 +202,6 @@ header {
 .sliders-container::before {
     content: "";
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     background: rgba(0, 0, 0, 0.45); /* Полупрозрачный черный слой */
     border-radius: 30px; /* Согласование с радиусом границы контейнера */
 }
