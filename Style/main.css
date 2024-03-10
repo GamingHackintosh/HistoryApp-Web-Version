@@ -164,6 +164,7 @@ header {
     color: #fff;
     background: rgba(0, 0, 0, 0.45);
     border-radius: 30px;
+    padding: 10px;
 }
 #results div {
     margin-bottom: 10px; 
