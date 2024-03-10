@@ -310,12 +310,8 @@ footer a {
         font-size: 14px; 
     }
 
-    #sidebar {
-        width: 100%;
-    }
-
-    .sidebar.active {
-        transform: translateX(0);
+    .menu {
+        border-right: 15px solid #fcfffc;
     }
 
     main {
@@ -338,13 +334,11 @@ footer a {
 
 
 @media (max-width: 768px) {
-    .sidebar {
-        width: 100%; /* На маленьких экранах sidebar будет на всю ширину */
-    }
-
     #content.shift {
         margin-left: 0; /* На маленьких экранах не сдвигаем содержимое */
     }
+
+    
 }
 
 
