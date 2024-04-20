@@ -60,8 +60,9 @@
     #content.shift {
         margin-left: 0; 
     }
-
-    
+    .menu-icon {
+        display: block;
+    }
 }
 
 
