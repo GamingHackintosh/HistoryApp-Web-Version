@@ -1,0 +1,70 @@
+/*===== Боковая навигация с датами (Sidebar) =====*/
+.menu {
+    padding-top: 10vh; /* Уменьшаем верхний отступ */
+    width: 350px; /* Фиксированная ширина */
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(35, 35, 35, 0.9));
+    height: 100vh;
+    border-right: 10px solid #fcfffc;
+    position: fixed;
+    left: -350px;
+    transition: left 0.5s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Включаем прокрутку */
+}
+.menu:hover {
+    left: 0;
+    overflow-y: auto; /* Включаем прокрутку при наведении */
+}
+.content-wrapper {
+    transition: margin-left 0.5s ease;
+}
+.menu:hover + .content-wrapper {
+    margin-left: 396px; 
+}
+.title-menu h1 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    color: #fcfffc;
+    margin-bottom: 30px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.list_menu {
+    max-height: 70vh; /* Ограничиваем максимальную высоту и включаем прокрутку */
+    overflow-y: auto; /* Включаем прокрутку */
+}
+.list_menu a {
+    display: block; 
+    white-space: nowrap;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    color: #fcfffc;
+    border-left: 4px solid #906652; 
+    transition: all 0.3s ease; 
+    padding-left: 5px;
+    cursor: pointer;
+}
+.list_menu a:hover {
+    border-left: 4px solid #ff0000;
+    padding-left: 15px;
+}
+.list_menu li {
+    margin-right: 10px;
+    flex: 1 0 21%;
+}
+.list_menu ul {
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: flex-start; 
+    padding: 0;
+    margin: 20px 0;
+}
+
+.footer_menu p {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    color: #fcfffc;
+    opacity: 0.7;
+}

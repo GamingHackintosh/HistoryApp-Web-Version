@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     centuryLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            const centuryText = link.getAttribute('data-century').trim() + "век"; 
+            const centuryText = link.getAttribute('data-century').trim() + " век"; 
             displayEventsForKeyword(centuryText);
         });
     });
