@@ -68,3 +68,6 @@ function displayResults(results) {
         resultsContainer.innerHTML = 'Ничего не найдено. Попробуйте изменить запрос.';
     }
 }
+document.querySelector('.menu-icon').addEventListener('click', function() {
+    document.querySelector('.menu-content').classList.toggle('active');
+});

@@ -63,6 +63,12 @@
     .menu-icon {
         display: block;
     }
+    .menu {
+        left: -310px; /* Уменьшите ширину меню на ширину иконки */
+    }
+    .menu:hover {
+        left: 0;
+    }
 }
 
 
