@@ -111,96 +111,6 @@ header {
 
 
 
-/*===== Слайдер с событиями =====*/
-.sliders-container {
-    background: rgba(0, 0, 0, 0.6); /* Уменьшение прозрачности */
-    border-radius: 15px; /* Мягкие края */
-    padding: 20px;
-    font-family: 'Vezitsa', Arial, sans-serif;
-    font-size: 20px; /* Меньший размер шрифта для большей читаемости */
-    color: #ffffff; /* Белый цвет текста для лучшей видимости */
-}
-
-.sliders-container::before {
-    content: "";
-    position: absolute;
-    background: rgba(0, 0, 0, 0.45); /* Полупрозрачный черный слой */
-    border-radius: 30px; /* Согласование с радиусом границы контейнера */
-}
-.sliders-container h2 {
-    width: 100%;
-    text-align: center;
-    color: #ffffff;
-    margin-bottom: 50px; 
-}
-
-.title-container {
-    margin-bottom: 30px; 
-}
-
-.slider {
-    margin: 0 10px;
-    width: 100%;
-}
-.slidersALL {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-}
-.slide, .slider, .DescContainer, .description, .Year {
-    position: relative;
-    z-index: 1;
-}
-.slide {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center;
-    opacity: 0;
-    transition: opacity 1s;
-}
-.slide.active {
-    opacity: 1;
-}
-.image-container img {
-    max-width: 50%;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.image-container img:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-}
-
-.DescContainer, .description, .Year {
-    color: #e0e0e0; 
-}
-.DescContainer {
-    margin: 0 auto;
-    width: 30%;
-    font-weight: semi bold;
-}
-.description {
-    max-width: 100%; 
-    padding: 10px; 
-}
-.description, .Year {
-    color: #FFFFFF;
-}
-.description p {
-    font-size: 20px;
-}
-.Year p {
-    font-size: 20px;
-}
-
-
-
-
 /*===== Самый низ =====*/ 
 footer {
     color: #E0E0E0;
@@ -217,7 +127,6 @@ footer {
 footer h2, footer h3, footer p {
     color: #ffffff;
 }
-
 footer a {
     color: #E0E0E0;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
