@@ -23,3 +23,19 @@ body {
 hidden {
     display: none;
 }
+/*===== Основной блок =====*/ 
+main {
+    flex: 1;
+    transition: padding-left 0.3s ease;
+}
+section {
+    margin-bottom: 20px;
+}
+section h2 {
+    font-weight: bold; 
+    
+}
+header, footer {
+    background-color: #5C4033;
+    color: #f4f4f4; 
+}
