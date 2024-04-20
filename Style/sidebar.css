@@ -1,7 +1,7 @@
 /*===== Боковая навигация с датами (Sidebar) =====*/
 .menu {
-    padding-top: 10vh; /* Уменьшаем верхний отступ */
-    width: 350px; /* Фиксированная ширина */
+    padding-top: 10vh;
+    width: 350px; 
     background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(35, 35, 35, 0.9));
     height: 100vh;
     border-right: 10px solid #fcfffc;
@@ -14,7 +14,7 @@
 }
 .menu:hover {
     left: 0;
-    overflow-y: auto; /* Включаем прокрутку при наведении */
+    overflow-y: auto;
 }
 .content-wrapper {
     transition: margin-left 0.5s ease;
@@ -22,6 +22,11 @@
 .menu:hover + .content-wrapper {
     margin-left: 396px; 
 }
+.menu-content {
+    padding: 40px;
+}
+
+
 .title-menu h1 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 40px;
@@ -51,6 +56,7 @@
 }
 .list_menu li {
     margin-right: 10px;
+    padding-top: 10px;
     flex: 1 0 21%;
 }
 .list_menu ul {
