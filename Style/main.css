@@ -12,13 +12,13 @@
 }
 
 .header-title {
-    font-size: 2em;
+    font-size: 3em;
     font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'FontHEAD', sans-serif;
 }
 .header-description {
-    font-size: 1em;
-    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    font-family: 'FontDESC', sans-serif;
     max-width: 50%; 
     line-height: 1.6; 
 }
