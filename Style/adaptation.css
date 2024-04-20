@@ -1,0 +1,89 @@
+/*===== Адаптация =====*/
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+
+/* Стили для телефонов */
+@media (max-width: 600px) {
+    header, footer {
+        padding: 10px 0; 
+    }
+    body {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed; 
+        background-image: url("../photo/ALLbackground`s/backgroundMobile.webp");
+    }
+    .Search {
+        padding: 30px 10px 10px; 
+    }
+
+
+    #search-input, #search-btn {
+        padding: 15px; 
+        font-size: 14px; 
+    }
+
+    .menu {
+        border-right: 15px solid #3c3c3c;
+    }
+
+    main {
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+
+    section {
+        margin-bottom: 15px;
+    }
+    
+    body {
+        font-size: 14px; 
+    }
+    
+    .slidersALL {
+        display: block;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #content.shift {
+        margin-left: 0; 
+    }
+
+    
+}
+
+
+/* Стили для планшетов */
+@media (min-width: 601px) and (max-width: 1024px) {
+    header, footer {
+        padding: 15px 0; 
+    }
+    
+    .Search {
+        padding: 120px 15px 15px; 
+    }
+
+    #search-input, #search-btn {
+        padding: 9px; 
+        font-size: 16px; 
+    }
+
+    main {
+        padding-top: 15px;
+        padding-bottom: 40px;
+    }
+
+    section {
+        margin-bottom: 18px;
+    }
+
+    body {
+        font-size: 16px; 
+    }
+}
