@@ -7,9 +7,6 @@
 
 /* Стили для телефонов */
 @media (max-width: 600px) {
-    header, footer {
-        padding: 10px 0; 
-    }
     body {
         background-size: cover;
         background-repeat: no-repeat;
@@ -21,7 +18,15 @@
         padding: 30px 10px 10px; 
     }
 
-
+    .main-header {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+    }
+    .header-description {
+        max-width: 100%;
+    }
+    
     #search-input, #search-btn {
         padding: 15px; 
         font-size: 14px; 
