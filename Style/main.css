@@ -49,10 +49,12 @@
     border: 2px solid #555;
     border-radius: 25px;
     background-color: transparent;
-    color: #fff;
+    color: #000000;
     outline: none;
     transition: all 0.3s ease-in-out;
-    font-size: 16px; 
+    font-size: 12px; 
+
+    background-color: #ffffff;
     background-image: url('../photo/icon/search.svg');
     background-repeat: no-repeat;
     background-position: 10px center;
@@ -60,7 +62,7 @@
     text-indent: 30px;
 }
 #search-input::placeholder {
-    color: #aaa; 
+    color: #000000; 
     font-style: italic;
 }
 #search-input:focus {

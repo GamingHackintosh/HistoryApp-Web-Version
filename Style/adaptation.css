@@ -15,7 +15,7 @@
         background-image: url("../photo/ALLbackground`s/backgroundMobile.webp");
     }
     .Search {
-        padding: 30px 10px 10px; 
+        padding: 2rem;
     }
 
     .main-header {
@@ -30,7 +30,7 @@
     
     #search-input, #search-btn {
         padding: 15px; 
-        font-size: 14px; 
+        font-size: 11px; 
     }
 
     .menu {
