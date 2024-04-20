@@ -1,0 +1,11 @@
+/*=============== Шрифты ===============*/
+@font-face {
+    font-family: 'FontHEAD';
+    src: url('../fonts/') format('truetype');
+    /* ... */
+}
+@font-face {
+    font-family: 'FontMAIN';
+    src: url('../fonts/') format('truetype');
+    /* ... */
+}
