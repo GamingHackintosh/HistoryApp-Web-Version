@@ -32,15 +32,33 @@ function displayResults(events) {
     });
 }
 
-// Устанавливаем обработчики событий на клики по ссылкам веков после загрузки DOM
+// Добавляем новую функцию для отображения событий "До нашей эры"
+function displayBeforeCenturyEvents() {
+    fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+        // Фильтруем события, содержащие "до н. э." в свойстве date
+        const beforeCenturyEvents = data.filter(event => event.date.includes('до н. э.'));
+        // Отображаем события "До нашей эры"
+        displayResults(beforeCenturyEvents);
+    })
+    .catch(error => console.error('Ошибка при загрузке данных: ', error));
+}
+
+// Обработчик событий на клики по ссылкам веков после загрузки DOM
 document.addEventListener('DOMContentLoaded', function() {
     const centuryLinks = document.querySelectorAll('.list_menu a');
-
+    
     centuryLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            const centuryText = link.getAttribute('data-century').trim() + " век"; 
-            displayEventsForKeyword(centuryText);
+            const century = link.getAttribute('data-century').trim();
+            if (century === "1") { // Если это ссылка "До нашей эры"
+                displayBeforeCenturyEvents();
+            } else {
+                const centuryText = century + " век"; 
+                displayEventsForKeyword(centuryText);
+            }
         });
     });
 });
