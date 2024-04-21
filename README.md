@@ -38,7 +38,7 @@
 
 1. Клонировать репозиторий на свой компьютер.
 
-+ 1.1. Открыть файл `index.html` в браузере.
+- 1.1. Открыть файл `index.html` в браузере.
 
 ИЛИ
 
@@ -60,9 +60,8 @@
 
 Благодарим всех, кто внесет вклад в разработку и поддержку этого проекта.
 
-
 <img src="photo/readmePhoto/MainReadme.png">
-<img src="photo/readmePhoto/navReadme.png">
+<img src="photo/readmePhoto/NavREADME.png">
 
-<img src="photo/readmePhoto/AdaptiveMainReadme.png" width="300">
-<img src="photo/readmePhoto/AdaptiveNavReadme.png" width="300">
+<img src="photo/readmePhoto/AdaptiveMainREADME.png" width="300">
+<img src="photo/readmePhoto/AdaptiveNavREADME.png" width="300">
