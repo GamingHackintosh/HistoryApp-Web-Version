@@ -53,6 +53,15 @@
     .slidersALL {
         display: block;
     }
+
+    /*=== Коллаж ===*/
+    .collage {
+        grid-template-columns: 1fr;
+    }
+    .collage .photo-description {
+        padding: 0.5rem;
+        font-size: 0.9rem; 
+    }
 }
 
 
@@ -64,7 +73,7 @@
         display: block;
     }
     .menu {
-        left: -310px; /* Уменьшите ширину меню на ширину иконки */
+        left: -310px;
     }
     .menu:hover {
         left: 0;
