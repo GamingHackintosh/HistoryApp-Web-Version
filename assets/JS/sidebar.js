@@ -34,7 +34,7 @@ function displayResults(events) {
 
 // Добавляем новую функцию для отображения событий "До нашей эры"
 function displayBeforeCenturyEvents() {
-    fetch('data.json')
+    fetch('assets/data.json')
     .then(response => response.json())
     .then(data => {
         // Фильтруем события, содержащие "до н. э." в свойстве date
