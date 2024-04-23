@@ -18,7 +18,7 @@ document.getElementById('search-btn').addEventListener('click', function() {
     // Проверяем, что введенное значение не является только годом
     const isYearQuery = searchValue.endsWith('гг.') || searchValue.endsWith('г.') || searchValue.endsWith('г') || searchValue.endsWith('.');
 
-    fetch('data.json')
+    fetch('assets/data.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok: ' + response.statusText);

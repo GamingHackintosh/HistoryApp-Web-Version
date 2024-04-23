@@ -7,7 +7,7 @@ function yearToCentury(year) {
 
 // Функция для отображения событий по ключевому слову века
 function displayEventsForKeyword(keyword) {
-    fetch('data.json')
+    fetch('assets/data.json')
     .then(response => response.json())
     .then(data => {
         // Фильтруем события, содержащие ключевое слово в свойстве keywords
