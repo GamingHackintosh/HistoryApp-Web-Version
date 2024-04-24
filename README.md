@@ -61,8 +61,8 @@
 
 Благодарим всех, кто внесет вклад в разработку и поддержку этого проекта.
 
-<img src="photo/readmePhoto/MainReadme.png">
-<img src="photo/readmePhoto/NavREADME.png">
+<img src="photo/readmePhoto/MainReadme.png" alt="Main">
+<img src="photo/readmePhoto/NavREADME.png" alt="Nav">
 
-<img src="photo/readmePhoto/AdaptiveMainREADME.png" width="300">
-<img src="photo/readmePhoto/AdaptiveNavREADME.png" width="300">
+<img src="photo/readmePhoto/AdaptiveMainREADME.png" width="300" alt="AdaptiveMAIN">
+<img src="photo/readmePhoto/AdaptiveNavREADME.png" width="300" alt="AdaptiveNAV">
