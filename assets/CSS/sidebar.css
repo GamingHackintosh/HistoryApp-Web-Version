@@ -38,8 +38,8 @@
 
 
 .title-menu h1 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 40px;
+    font-family: 'Header-TITLE', sans-serif;
+    font-size: 50px;
     color: #fcfffc;
     margin-bottom: 30px; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -85,4 +85,8 @@
     font-size: 15px;
     color: #fcfffc;
     opacity: 0.7;
+    transition: opacity 0.3s ease;
 }
+.footer_menu p:hover {
+    opacity: 1;
+  }
