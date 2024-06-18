@@ -1,16 +1,11 @@
 /*=============== Шрифты ===============*/
 @font-face {
-    font-family: 'FontHEAD';
+    font-family: 'Header-TITLE';
     src: url('../fonts/MorfinSans-Regular.ttf') format('truetype');
     /* ... */
 }
 @font-face {
-    font-family: 'FontMAIN';
-    src: url('../fonts/') format('truetype');
-    /* ... */
-}
-@font-face {
-    font-family: 'FontDESC';
+    font-family: 'Header-DESC';
     src: url('../fonts/dance_partner_0.ttf') format('truetype');
     /* ... */
 }

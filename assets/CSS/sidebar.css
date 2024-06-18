@@ -70,11 +70,11 @@
     flex: 1 0 21%;
 }
 .list_menu ul {
-    display: flex; 
-    flex-wrap: wrap; 
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start; 
-    padding: 0;
+    justify-content: center;
+    padding: 1px;
     margin: 20px 0;
 }
 

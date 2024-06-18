@@ -1,0 +1,156 @@
+/*===== Адаптация =====*/
+
+/*=== Sidebar.css ===*/
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+
+/*=== Header.css ===*/
+@media (max-width: 768px) {
+    /* main-header */
+    .main-header {
+        display: grid !important;
+        justify-content: center;
+        text-align: center;
+    }
+    .header-description {
+        max-width: 100% !important;
+        margin-top: 10px;
+    }
+}
+
+/*=== Search.css ===*/
+@media (max-width: 768px) {
+    .Search {
+        width: 260px;
+        padding: 15px;
+        font-size: 14px;
+        padding: 2rem !important;
+    }
+    #search-input, #search-btn {
+        padding: 15px !important;
+        font-size: 14px !important;
+    }
+    .collage {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+/* results */
+@media (max-width: 600px) {
+    #results {
+        padding: 10px;
+        width: 100%;
+        max-width: 365px;
+        margin: 1rem auto;
+    }
+
+}
+
+/* Стили для телефонов */
+@media (max-width: 600px) {
+    /* body */
+    body {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed; 
+        background-image: url("../photo/background`s/background-Mobile.webp");
+        font-size: 14px; 
+        position: relative; /* Для псевдоэлемента */
+        z-index: 1; /* Для наложения псевдоэлемента */
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+
+
+    /* main */
+    main {
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+
+    /* section */
+    section {
+        margin-bottom: 15px;
+    }
+
+    /* menu */
+    .menu {
+        border-right: 15px solid #3c3c3c;
+    }
+
+    /* slidersALL */
+    .slidersALL {
+        display: block;
+    }
+
+    /* collage */
+    .collage {
+        grid-template-columns: 1fr;
+    }
+    .collage .photo-description {
+        padding: 0.5rem;
+        font-size: 0.9rem; 
+    }
+}
+
+@media (max-width: 768px) {
+    /* content */
+    #content.shift {
+        margin-left: 0; 
+    }
+
+    /* menu-icon */
+    .menu-icon {
+        display: block;
+    }
+
+    /* menu */
+    .menu {
+        left: -310px;
+    }
+    .menu:hover {
+        left: 0;
+    }
+}
+
+/* Стили для планшетов */
+
+/*=== reset.css ===*/
+@media (min-width: 601px) and (max-width: 1024px) {
+    /* header, footer */
+    header, footer {
+        padding: 15px 0; 
+    }
+
+    /* body */
+    body {
+        font-size: 16px; 
+    }
+
+    /* main */
+    main {
+        padding-top: 15px;
+        padding-bottom: 40px;
+    }
+
+    /* section */
+    section {
+        margin-bottom: 18px;
+    }
+}

@@ -36,3 +36,37 @@ document.getElementById('search-btn').addEventListener('click', function() {
             console.error('Произошла ошибка при загрузке data.json: ', error);
         });
 });
+
+// Обработчик событий для появления результата
+function displayResults(results) {
+    const resultsContainer = document.getElementById('results');
+    resultsContainer.innerHTML = '';
+
+    if (results.length > 0) {
+        results.forEach(item => {
+            // Создаем обертку для каждого результата
+            const resultWrapper = document.createElement('div');
+            resultWrapper.className = 'result-wrapper';
+
+            // Создаем и стилизуем элемент даты
+            const dateHeading = document.createElement('h4');
+            dateHeading.textContent = item.date;
+            resultWrapper.appendChild(dateHeading);
+
+            // Создаем и добавляем описание события
+            const eventParagraph = document.createElement('p');
+            eventParagraph.textContent = item.event;
+            resultWrapper.appendChild(eventParagraph);
+
+            // Добавляем обертку с датой и описанием в контейнер результатов
+            resultsContainer.appendChild(resultWrapper);
+        });
+
+        // Показываем контейнер результатов
+        resultsContainer.style.display = 'block';
+    } else {
+        resultsContainer.textContent = 'Ничего не найдено. Попробуйте изменить запрос.';
+        // Показываем контейнер с сообщением об отсутствии результатов
+        resultsContainer.style.display = 'block';
+    }
+}

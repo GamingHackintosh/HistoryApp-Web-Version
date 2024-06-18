@@ -1,0 +1,99 @@
+/*===== Поиск =====*/
+.Search {
+    display: flex;
+    justify-content: center;
+}
+.Search.container {
+    flex-direction: column;
+}
+
+#search-input {
+    width: 250px;
+    padding: 15px;
+    margin-right: 10px;
+    border: 2px solid #555;
+    border-radius: 25px;
+    background-color: #ffffff;
+    color: #000000;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url('../photo/icon/search.svg');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 20px;
+    text-indent: 30px;
+}
+
+#search-input::placeholder {
+    color: #000000;
+    font-style: italic;
+}
+
+#search-input:focus {
+    border: 5px solid #6B4E16;
+    width: 300px;
+}
+
+#search-btn {
+    padding: 10px 20px;
+    border: 2px solid #6B4E16;
+    background-color: #F4E4BC;
+    color: #3E280B;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+#search-btn:hover, #search-btn:focus {
+    background-color: #5C3D0F;
+    color: #E8D7A2;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+/*===== Результаты =====*/
+#results {
+    display: none;
+    margin: 2rem;
+    text-align: left; 
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    padding: 20px;
+    width: 900px;
+    max-height: 400px; 
+    overflow: auto;
+}
+#results div {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.result-wrapper {
+    margin-bottom: 15px;
+}
+
+.result-wrapper h4 {
+    font-size: 16px; 
+    margin-bottom: 5px;
+}
+
+.result-wrapper p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+}

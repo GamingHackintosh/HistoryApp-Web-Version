@@ -6,11 +6,14 @@
     <title>История России</title>
 
     <!-- Стили -->
-    <link rel="stylesheet" href="assets/Style/main.css">
-    <link rel="stylesheet" href="assets/Style/adaptation.css">
-    <link rel="stylesheet" href="assets/Style/sidebar.css">
-    <link rel="stylesheet" href="assets/Style/reset.css">
-    <link rel="stylesheet" href="assets/Style/font.css">
+    <link rel="stylesheet" href="assets/CSS/reset.css">
+    <link rel="stylesheet" href="assets/CSS/font.css">
+    <link rel="stylesheet" href="assets/CSS/adaptation.css">
+    <link rel="stylesheet" href="assets/CSS/sidebar.css">
+    <link rel="stylesheet" href="assets/CSS/search.css">
+    <link rel="stylesheet" href="assets/CSS/header.css">
+    <link rel="stylesheet" href="assets/CSS/footer.css">
+    <link rel="stylesheet" href="assets/CSS/gallery.css">
 
     <!-- Favicon -->
     <link rel="icon" href="assets/photo/icon/favicon.png" type="image/x-icon">
@@ -24,12 +27,13 @@
 
 
 <body>
-    <div class="main-header">
+    <!--- HEADER --->
+    <header class="main-header">
         <div class="header-title">Эхо веков</div>
         <div class="header-description">
             <p>Данное веб-приложение предназначено для поиска и изучения значимых исторических событий России. Пользователи могут искать информацию по ключевым словам или датам, связанным с историческими событиями.</p>
         </div>
-    </div>
+    </header>
     
 
     <div class="menu">
@@ -65,46 +69,47 @@
         </div>
 	</div>
 
+    <!--- MAIN --->
     <main>
-        <div class="main-1">
+        <section class="Search container">
             <section class="Search">
                 <input type="text" id="search-input" placeholder="Поиск по ключевым словам или дате">
                 <button id="search-btn"><b>Найти</b></button>
             </section>
 
-        <div id="results"></div>
-        </div>
+            <div id="results"></div>
+        </section>
 
-        <section class="gallery">
+        <section class="gallery container">
             <h2>Историческая галерея</h2>
             <div class="collage">
                 <!-- Событие 1 -->
-                <div class="photo">
-                    <img src="assets/photo/СобытияPhoto/FoundingOfMoscow.webp" alt="Основание Москвы" />
+                <div class="collage-photo">
+                    <img src="assets/photo/Events-Photo/FoundingOfMoscow.webp" alt="Основание Москвы" />
                     <div class="photo-description">
                         <h3>Основание Москвы</h3>
                         <p>Москва была впервые упомянута в летописях в 1147 году, что считается годом её основания.</p>
                     </div>
                 </div>
                 <!-- Событие 2 -->
-                <div class="photo">
-                    <img src="assets/photo/СобытияPhoto/KulikovskayaBattle.webp" alt="Куликовская битва" />
+                <div class="collage-photo">
+                    <img src="assets/photo/Events-Photo/KulikovskayaBattle.webp" alt="Куликовская битва" />
                     <div class="photo-description">
                         <h3>Куликовская битва</h3>
                         <p>Битва на Куликовом поле 8 сентября 1380 года стала ключевым моментом в истории Руси, знаменуя собой начало конца монгольского владычества.</p>
                     </div>
                 </div>
                 <!-- Событие 3 -->
-                <div class="photo">
-                    <img src="assets/photo/СобытияPhoto/DekabristovRevolt.webp" alt="Восстание Декабристов" />
+                <div class="collage-photo">
+                    <img src="assets/photo/Events-Photo/DekabristovRevolt.webp" alt="Восстание Декабристов" />
                     <div class="photo-description">
                         <h3>Восстание Декабристов</h3>
                         <p>Восстание, организованное русскими аристократами-либералами в декабре 1825 года, было направлено против автократии и крепостничества.</p>
                     </div>
                 </div>
                 <!-- Событие 4 -->
-                <div class="photo">
-                    <img src="assets/photo/СобытияPhoto/Covid19.webp" alt="Пандемия COVID-19" />
+                <div class="collage-photo">
+                    <img src="assets/photo/Events-Photo/Covid19.webp" alt="Пандемия COVID-19" />
                     <div class="photo-description">
                         <h3>Пандемия COVID-19</h3>
                         <p>В 2019 году началась пандемия из-за вируса SARS-CoV-2. Первые случаи были зарегистрированы в Ухане, Китай.</p>
@@ -114,13 +119,15 @@
         </section>
     </main>
 
+    <!--- FOOTER --->
     <footer>
         <p>&copy; г. 2024 @GamingHackintosh. All Rights Reserved.</p>
     </footer>
 
 
-    <!-- Скрипты (Подключенные модули) -->
+    <!-- Scripts -->
     <script src="assets/JS/main.js"></script>
     <script src="assets/JS/sidebar.js"></script>
+    <script src="assets/JS/search.js"></script>
 </body>
 </html>

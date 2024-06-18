@@ -3,8 +3,10 @@
     text-decoration: none;
 }
 
-
-/*===== Настройки =====*/
+/*===== Сброс стилей =====*/
+html {
+    scroll-behavior: smooth;
+}
 body, html {
     height: 100%;
     margin: 0;
@@ -21,10 +23,23 @@ body {
     background-attachment: fixed;
     color: #dcd0c0;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
-    background-image: url("../photo/ALLbackground`s/background.webp") ;
+    background-image: url("../photo/background`s/background.webp") ;
 }
-.hidden {
-    display: none;
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+.container {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    margin: 0 auto;
 }
 /*===== Основной блок =====*/ 
 main {
