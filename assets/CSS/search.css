@@ -63,7 +63,6 @@
 
 /*===== Результаты =====*/
 #results {
-    display: none;
     margin: 2rem;
     text-align: left; 
     color: #fff;
@@ -74,6 +73,12 @@
     max-height: 400px; 
     overflow: auto;
 }
+#results .event {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+}
+
 #results div {
     margin-bottom: 10px;
     padding: 10px;

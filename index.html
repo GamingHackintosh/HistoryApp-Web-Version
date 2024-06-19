@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>История России</title>
-
     <!-- Стили -->
     <link rel="stylesheet" href="assets/CSS/reset.css">
     <link rel="stylesheet" href="assets/CSS/font.css">
@@ -14,7 +13,6 @@
     <link rel="stylesheet" href="assets/CSS/header.css">
     <link rel="stylesheet" href="assets/CSS/footer.css">
     <link rel="stylesheet" href="assets/CSS/gallery.css">
-
     <!-- Favicon -->
     <link rel="icon" href="assets/photo/icon/favicon.png" type="image/x-icon">
     <!-- Метатег для iOS -->
@@ -23,9 +21,6 @@
     <!-- Метатег для Android -->
     <meta name="mobile-web-app-capable" content="yes">
 </head>
-
-
-
 <body>
     <!--- HEADER --->
     <header class="main-header">
@@ -35,8 +30,8 @@
         </div>
     </header>
     
-
-    <div class="menu">
+    <!-- MENU -->
+    <div class="menu" id="sidebar">
         <div class="menu-icon">
             <span>☰</span>
         </div>
@@ -44,46 +39,45 @@
             <div class="title-menu"><h1>НАВИГАЦИЯ</h1></div>
             <div class="list_menu">
                 <ul class="list_menu">
-                    <li><a href="#BeforeCentury" data-century="1">До нашей эры</a></li>
+                    <li><a href="#BeforeCentury" data-century="BeforeCentury">До нашей эры</a></li>
                 </ul>
                 <h3>После начала российской государственности</h3>
                 <ul class="list_menu">
-                    <li><a href="#9century" data-century="9">9 Век</a></li>
-                    <li><a href="#10century" data-century="10">10 Век</a></li>
-                    <li><a href="#11century" data-century="11">11 Век</a></li>
-                    <li><a href="#12century" data-century="12">12 Век</a></li>
-                    <li><a href="#13century" data-century="13">13 Век</a></li>
-                    <li><a href="#14century" data-century="14">14 Век</a></li>
-                    <li><a href="#15century" data-century="15">15 Век</a></li>
-                    <li><a href="#16century" data-century="16">16 Век</a></li>
-                    <li><a href="#17century" data-century="17">17 Век</a></li>
-                    <li><a href="#18century" data-century="18">18 Век</a></li>
-                    <li><a href="#19century" data-century="19">19 Век</a></li>
-                    <li><a href="#20century" data-century="20">20 Век</a></li>
-                    <li><a href="#21century" data-century="21">21 Век</a></li>
+                    <li><a href="#" data-century="century-9">9 Век</a></li>
+                    <li><a href="#" data-century="century-10">10 Век</a></li>
+                    <li><a href="#" data-century="century-11">11 Век</a></li>
+                    <li><a href="#" data-century="century-12">12 Век</a></li>
+                    <li><a href="#" data-century="century-13">13 Век</a></li>
+                    <li><a href="#" data-century="century-14">14 Век</a></li>
+                    <li><a href="#" data-century="century-15">15 Век</a></li>
+                    <li><a href="#" data-century="century-16">16 Век</a></li>
+                    <li><a href="#" data-century="century-17">17 Век</a></li>
+                    <li><a href="#" data-century="century-18">18 Век</a></li>
+                    <li><a href="#" data-century="century-19">19 Век</a></li>
+                    <li><a href="#" data-century="century-20">20 Век</a></li>
+                    <li><a href="#" data-century="century-21">21 Век</a></li>
                 </ul>
             </div>
             <div class="footer_menu">
                 <p>© gaminghackintosh 2024</p>
             </div>
         </div>
-	</div>
+    </div>
 
     <!--- MAIN --->
     <main>
         <section class="Search container">
             <section class="Search">
-                <input type="text" id="search-input" placeholder="Поиск по ключевым словам или дате">
-                <button id="search-btn"><b>Найти</b></button>
+                <input type="text" id="search-input" placeholder="Введите ключевое слово">
+                <button id="search-btn">Поиск</button>
             </section>
-
             <div id="results"></div>
         </section>
 
         <section class="gallery container">
             <h2>Историческая галерея</h2>
             <div class="collage">
-                <!-- Событие 1 -->
+                <!-- События для галереи (можно удалить или заменить на ваши данные) -->
                 <div class="collage-photo">
                     <img src="assets/photo/Events-Photo/FoundingOfMoscow.webp" alt="Основание Москвы" />
                     <div class="photo-description">
@@ -91,7 +85,6 @@
                         <p>Москва была впервые упомянута в летописях в 1147 году, что считается годом её основания.</p>
                     </div>
                 </div>
-                <!-- Событие 2 -->
                 <div class="collage-photo">
                     <img src="assets/photo/Events-Photo/KulikovskayaBattle.webp" alt="Куликовская битва" />
                     <div class="photo-description">
@@ -99,7 +92,6 @@
                         <p>Битва на Куликовом поле 8 сентября 1380 года стала ключевым моментом в истории Руси, знаменуя собой начало конца монгольского владычества.</p>
                     </div>
                 </div>
-                <!-- Событие 3 -->
                 <div class="collage-photo">
                     <img src="assets/photo/Events-Photo/DekabristovRevolt.webp" alt="Восстание Декабристов" />
                     <div class="photo-description">
@@ -107,7 +99,6 @@
                         <p>Восстание, организованное русскими аристократами-либералами в декабре 1825 года, было направлено против автократии и крепостничества.</p>
                     </div>
                 </div>
-                <!-- Событие 4 -->
                 <div class="collage-photo">
                     <img src="assets/photo/Events-Photo/Covid19.webp" alt="Пандемия COVID-19" />
                     <div class="photo-description">
@@ -123,7 +114,6 @@
     <footer>
         <p>&copy; г. 2024 @GamingHackintosh. All Rights Reserved.</p>
     </footer>
-
 
     <!-- Scripts -->
     <script src="assets/JS/main.js"></script>
