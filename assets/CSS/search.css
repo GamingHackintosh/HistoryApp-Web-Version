@@ -63,28 +63,38 @@
 
 /*===== Результаты =====*/
 #results {
-    margin: 2rem;
-    text-align: left; 
-    color: #fff;
-    background: rgba(0, 0, 0, 0.6);
+    margin: 20px 0;
+    text-align: left;
+    color: #3E280B;
     border-radius: 20px;
     padding: 20px;
-    width: 900px;
-    max-height: 400px; 
+    width: 100%;
+    max-width: 900px;
+    max-height: 400px;
     overflow: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border: 1px solid #e0e0e0; 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-#results .event {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px 0;
+
+#results:hover {
+    border-color: #d1d1d1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 #results div {
     margin-bottom: 10px;
     padding: 10px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(10, 10, 10, 0.7);
+    color: #f4f1e1; 
     border-radius: 10px;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#results div:hover {
+    background: rgba(240, 240, 240, 0.7);
+    color: #3E280B;
+    transform: translateY(-10px);
 }
 
 .result-wrapper {
@@ -92,8 +102,9 @@
 }
 
 .result-wrapper h4 {
-    font-size: 16px; 
+    font-size: 18px;
     margin-bottom: 5px;
+    color: #3E280B;
 }
 
 .result-wrapper p {
@@ -101,4 +112,22 @@
     line-height: 1.5;
     margin-bottom: 10px;
     word-wrap: break-word;
+    color: #3E280B; 
+}
+
+/* Стиль для событий */
+.event {
+    border: 1px solid #d3d3d3;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    background: rgba(10, 10, 10, 0.7);
+    color: #f4f1e1; 
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.event:hover {
+    border-color: #bcbcbc;
+    background: rgba(240, 240, 240, 0.7); 
+    color: #3E280B;
 }

@@ -66,9 +66,3 @@
 ## Благодарности
 
 Благодарим всех, кто внесет вклад в разработку и поддержку этого проекта.
-
-<img src="assets/photo/readmePhoto/MainREADME.png" alt="Main">
-<img src="assets/photo/readmePhoto/NavREADME.png" alt="Nav">
-
-<img src="assets/photo/readmePhoto/AdaptativeMainREADME.png" width="300" alt="AdaptiveMAIN">
-<img src="assets/photo/readmePhoto/AdaptiveNavREADME.png" width="300" alt="AdaptiveNAV">

@@ -11,6 +11,8 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 .gallery h2 {
+    font-family: 'Header-TITLE', sans-serif;
+    font-size: 30px;
     text-align: center;
 }
 

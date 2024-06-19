@@ -66,9 +66,3 @@ If you have any questions or suggestions, please reach out through ***Issues***.
 ## Acknowledgements
 
 We thank everyone who contributes to the development and support of this project.
-
-![Main](assets/photo/readmePhoto/MainREADME.png)
-![Nav](assets/photo/readmePhoto/NavREADME.png)
-
-<img src="assets/photo/readmePhoto/AdaptativeMainREADME.png" width="300" alt="AdaptiveMAIN">
-<img src="assets/photo/readmePhoto/AdaptiveNavREADME.png" width="300" alt="AdaptiveNAV">
