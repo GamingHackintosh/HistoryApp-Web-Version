@@ -65,6 +65,7 @@
 #results {
     margin: 20px 0;
     text-align: left;
+    background-color: rgba(10, 10, 10, 0.9);
     color: #3E280B;
     border-radius: 20px;
     padding: 20px;
@@ -72,11 +73,11 @@
     max-width: 900px;
     max-height: 400px;
     overflow: auto;
+    font-family: 'Header-TITLE', sans-serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     border: 1px solid #e0e0e0; 
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-
 #results:hover {
     border-color: #d1d1d1;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
@@ -88,25 +89,23 @@
     background: rgba(10, 10, 10, 0.7);
     color: #f4f1e1; 
     border-radius: 10px;
+    letter-spacing: 0.1em;
     transition: background 0.3s, transform 0.3s;
 }
-
 #results div:hover {
     background: rgba(240, 240, 240, 0.7);
-    color: #3E280B;
+    color: #000000;
     transform: translateY(-10px);
 }
 
 .result-wrapper {
     margin-bottom: 15px;
 }
-
 .result-wrapper h4 {
     font-size: 18px;
     margin-bottom: 5px;
     color: #3E280B;
 }
-
 .result-wrapper p {
     font-size: 16px;
     line-height: 1.5;
@@ -117,17 +116,16 @@
 
 /* Стиль для событий */
 .event {
-    border: 1px solid #d3d3d3;
-    padding: 15px;
+    border: 1px solid #e0e0e0;
+    padding: 15px; 
     margin: 15px 0;
     border-radius: 10px;
-    background: rgba(10, 10, 10, 0.7);
-    color: #f4f1e1; 
-    transition: border-color 0.3s ease, background 0.3s ease;
-}
-
-.event:hover {
-    border-color: #bcbcbc;
-    background: rgba(240, 240, 240, 0.7); 
+    background: rgba(240, 240, 240, 0.8); 
     color: #3E280B;
+    transition: border-color 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+.event:hover {
+    border-color: #d1d1d1; 
+    background: rgba(250, 250, 250, 0.9);
+    color: #5C3D0F;
 }

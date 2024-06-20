@@ -6,7 +6,7 @@
     height: 100vh;
     border-right: 20px solid #fcfffc00;
     position: fixed;
-    left: -350px;
+    left: -370px;
     transition: left 0.5s ease;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -19,7 +19,7 @@
 
 .menu-icon {
     position: fixed;
-    left: 20px;
+    left: 0px;
     top: 0px    ;
     width: 50px;
     height: 50px;
