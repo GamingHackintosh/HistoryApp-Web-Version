@@ -1,7 +1,7 @@
 /*===== Боковая навигация с датами (Sidebar) =====*/
 .menu {
     padding-top: 10vh;
-    width: 350px; 
+    width: 370px; 
     background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(35, 35, 35, 0.9));
     height: 100vh;
     border-right: 20px solid #fcfffc00;
@@ -14,32 +14,31 @@
 }
 
 .menu-content {
-    padding: 40px;
+    padding: 45px;
 }
 
 .menu-icon {
     position: fixed;
     left: 0px;
-    top: 0px    ;
+    top: 0px;
     width: 50px;
     height: 50px;
     background-color: #F4E4BC;
-    color: #3E280B;
     border: 2px solid #6B4E16;
     z-index: 1001;
     cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s, left 0.5s ease; 
-    font-size: 24px;
-    text-align: center;
-    line-height: 50px;
+    transition: transform 0.3s, background-color 0.3s, left 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.menu-icon::before {
-    content: '\2630';
+.menu-icon img {
+    width: 24px;
+    height: 24px;
 }
 
 .menu-open .menu-icon {
-    left: 330px; /* Ширина меню + отступ справа */
+    left: 330px;
     background-color: #333; 
 }
 

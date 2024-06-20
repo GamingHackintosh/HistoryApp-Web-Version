@@ -16,6 +16,33 @@
     text-align: center;
 }
 
+/*=== Slider ===*/
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+.scroll-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.scroll-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+/*=== Collage ===*/
 .collage {
     display: flex;
     gap: 1rem;
@@ -27,6 +54,8 @@
     overflow: hidden;
     border-radius: 20px;
     aspect-ratio: 1 / 1; 
+    min-width: calc(25% - 1rem);
+    flex: 1 1 calc(25% - 1rem);
 }
 .collage-photo img {
     width: 100%;
@@ -51,7 +80,6 @@
     transition: visibility 0s, opacity 0.3s ease;
     text-align: left;
 }
-
 .collage-photo:hover .photo-description {
     visibility: visible;
     opacity: 1;

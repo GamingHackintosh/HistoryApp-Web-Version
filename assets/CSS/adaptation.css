@@ -129,6 +129,12 @@
 }
 
 @media (max-width: 768px) {
+    * {
+        list-style: none;
+        text-decoration: none;
+        box-sizing: content-box;
+    }
+    
     /* content */
     #content.shift {
         margin-left: 0; 
@@ -152,6 +158,12 @@
 
 /*=== reset.css ===*/
 @media (min-width: 601px) and (max-width: 1024px) {
+    * {
+        list-style: none;
+        text-decoration: none;
+        box-sizing: content-box;
+    }
+
     /* header, footer */
     header, footer {
         padding: 15px 0; 
