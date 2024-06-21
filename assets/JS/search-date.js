@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const resultsContainer = document.getElementById("results");
     const searchInput = document.getElementById("search-input");
     const searchBtn = document.getElementById("search-btn");
+    const errorMessage = document.getElementById("error-message");
 
     let eventsData = [];
 
@@ -21,13 +22,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
             searchBtn.addEventListener("click", () => {
                 const keyword = searchInput.value.trim().toLowerCase();
-                displayEventsForKeyword(eventsData, keyword);
+                if (keyword === "") {
+                    displayErrorMessage("Поле ввода не может быть пустым.");
+                } else {
+                    displayEventsForKeyword(eventsData, keyword);
+                }
             });
         });
 
     function displayEventsForCentury(data, century) {
-        // Очищаем предыдущие результаты
+        // Очищаем предыдущие результаты и скрываем сообщение об ошибке
         resultsContainer.innerHTML = "";
+        errorMessage.style.display = "none";
+        resultsContainer.style.display = "block"; // Показываем блок результатов
 
         // Фильтруем события по веку
         const filteredEvents = data.filter(event => event.century === century);
@@ -48,8 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function displayEventsForKeyword(data, keyword) {
-        // Очищаем предыдущие результаты
+        // Очищаем предыдущие результаты и скрываем сообщение об ошибке
         resultsContainer.innerHTML = "";
+        errorMessage.style.display = "none";
+        resultsContainer.style.display = "block"; // Показываем блок результатов
 
         // Фильтруем события по ключевому слову
         const filteredEvents = data.filter(event => event.keywords.toLowerCase().includes(keyword));
@@ -67,5 +76,10 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             resultsContainer.innerHTML = "<p>Событий по данному запросу не найдено.</p>";
         }
+    }
+
+    function displayErrorMessage(message) {
+        errorMessage.textContent = message;
+        errorMessage.style.display = "block";
     }
 });
