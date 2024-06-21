@@ -154,6 +154,39 @@
     }
 }
 
+/*=== gallery.css ===*/
+@media (max-width: 600px) {
+    .collage {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 1.5rem;
+    }
+    .collage-photo {
+        min-width: 100% !important;
+        flex: 1 1 100%;
+        margin: 0 auto;
+    }
+
+    .scroll-left, .scroll-right {
+        display: block;
+    }
+
+    .collage {
+        overflow-x: hidden; 
+    }
+}
+
+@media (min-width: 601px) {
+    .scroll-left, .scroll-right {
+        display: none;
+    }
+
+    .collage {
+        overflow-x: auto;
+    }
+}
+
+
 /* Стили для планшетов */
 
 /*=== reset.css ===*/

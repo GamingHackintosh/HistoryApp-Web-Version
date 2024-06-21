@@ -1,20 +1,24 @@
-const slider = document.querySelector('.slider-wrapper');
-const leftButton = document.querySelector('.scroll-left');
-const rightButton = document.querySelector('.scroll-right');
-const collagePhotos = document.querySelectorAll('.collage-photo');
-const photoWidth = collagePhotos[0].offsetWidth + parseFloat(getComputedStyle(collagePhotos[0]).marginRight);
-let scrollPosition = 0;
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollLeftBtn = document.querySelector('.scroll-left');
+    const scrollRightBtn = document.querySelector('.scroll-right');
+    const collage = document.querySelector('.collage');
 
-leftButton.addEventListener('click', () => {
-    scrollPosition -= photoWidth * 4; // Прокручиваем на 4 карточки
-    if (scrollPosition < 0) scrollPosition = 0;
-    slider.style.transform = `translateX(-${scrollPosition}px)`;
-});
+    const scrollAmount = () => {
+        const photoWidth = document.querySelector('.collage-photo').offsetWidth;
+        return photoWidth; // Прокручиваем на одну карточку
+    };
 
-rightButton.addEventListener('click', () => {
-    scrollPosition += photoWidth * 4; // Прокручиваем на 4 карточки
-    if (scrollPosition > (photoWidth * (collagePhotos.length - 4))) {
-        scrollPosition = photoWidth * (collagePhotos.length - 4);
-    }
-    slider.style.transform = `translateX(-${scrollPosition}px)`;
+    scrollLeftBtn.addEventListener('click', () => {
+        collage.scrollBy({
+            left: -scrollAmount(),
+            behavior: 'smooth'
+        });
+    });
+
+    scrollRightBtn.addEventListener('click', () => {
+        collage.scrollBy({
+            left: scrollAmount(),
+            behavior: 'smooth'
+        });
+    });
 });
