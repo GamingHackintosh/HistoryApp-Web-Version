@@ -1,4 +1,4 @@
-/*===== Боковая навигация с датами (Sidebar) =====*/
+/* Боковая навигация с датами (Sidebar) */
 .menu {
     padding-top: 10vh;
     width: 370px; 
@@ -35,6 +35,9 @@
 .menu-icon img {
     width: 24px;
     height: 24px;
+}
+.menu-icon.active img {
+    animation: rotate 0.5s ease forwards;
 }
 
 .menu-open .menu-icon {
@@ -97,4 +100,41 @@
 
 .footer_menu p:hover {
     opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .menu {
+        width: 300px;
+        left: -300px;
+    }
+
+    .menu-open .menu-icon {
+        left: 270px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu-open .menu-icon {
+        left: 260px;
+    }
+
+    .menu-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu-icon img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .menu {
+        padding-top: 15px;
+    }
+
+    .list_menu a {
+        font-size: 18px;
+    }
 }
