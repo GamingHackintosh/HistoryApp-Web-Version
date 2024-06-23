@@ -1,4 +1,29 @@
-/* Боковая навигация с датами (Sidebar) */
+/*===== Боковая навигация с датами (Sidebar) =====*/
+/*== Первый сайдбар ==*/
+#sidebar-1 {
+    left: -370px;
+}
+
+#menu-icon1 {
+    left: 0px;
+}
+.menu-open #menu-icon1 {
+    left: 330px;
+}
+
+/*== Второй сайдбар ==*/
+#sidebar-2 {
+    left: -370px;
+}
+
+#menu-icon2 {
+    left: 50px;
+}
+.menu-open #menu-icon2 {
+    left: 380px;
+}
+
+
 .menu {
     padding-top: 10vh;
     width: 370px; 

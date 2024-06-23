@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const sidebar = document.getElementById("sidebar");
+    const sidebar = document.getElementById("sidebar-1");
     const resultsContainer = document.getElementById("results");
     const searchInput = document.getElementById("search-input");
     const searchBtn = document.getElementById("search-btn");
@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function displayEventsForCentury(data, century) {
         // Очищаем предыдущие результаты и скрываем сообщение об ошибке
         resultsContainer.innerHTML = "";
-        errorMessage.style.display = "none";
-        resultsContainer.style.display = "block"; // Показываем блок результатов
+        errorMessage.style.display = "none"; // Скрывает 
+        resultsContainer.style.display = "block"; // Показывает блок результатов
 
         // Фильтруем события по веку
         const filteredEvents = data.filter(event => event.century === century);
@@ -50,19 +50,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 resultsContainer.appendChild(eventElement);
             });
         } else {
-            resultsContainer.innerHTML = "<p>Событий для этого века не найдено.</p>";
+            resultsContainer.innerHTML = '<p id="error-message">Поле ввода не может быть пустым.</p>';
         }
     }
 
     function displayEventsForKeyword(data, keyword) {
         // Очищаем предыдущие результаты и скрываем сообщение об ошибке
         resultsContainer.innerHTML = "";
-        errorMessage.style.display = "none";
+        errorMessage.style.display = "none"; // Скрываем
         resultsContainer.style.display = "block"; // Показываем блок результатов
-
+    
         // Фильтруем события по ключевому слову
         const filteredEvents = data.filter(event => event.keywords.toLowerCase().includes(keyword));
-
+    
         if (filteredEvents.length > 0) {
             filteredEvents.forEach(event => {
                 const eventElement = document.createElement("div");
@@ -74,9 +74,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 resultsContainer.appendChild(eventElement);
             });
         } else {
-            resultsContainer.innerHTML = "<p>Событий по данному запросу не найдено.</p>";
+            resultsContainer.innerHTML = '<p id="not-found">Событий по данному запросу не найдено.</p>';
         }
     }
+    
 
     function displayErrorMessage(message) {
         errorMessage.textContent = message;

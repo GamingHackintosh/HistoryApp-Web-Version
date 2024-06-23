@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menuIcon = document.getElementById('menu-icon');
-    const sidebar = document.getElementById('sidebar');
+    const sidebar = document.getElementById('sidebar-1');
 
     menuIcon.addEventListener('click', () => {
         const windowWidth = window.innerWidth;

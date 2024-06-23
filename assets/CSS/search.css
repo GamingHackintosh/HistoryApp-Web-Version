@@ -129,11 +129,30 @@
 
 /* Стиль для сообщений об ошибках */
 #error-message {
-    color: #f44336;
-    background-color: #ffebee;
-    border: 1px solid #f44336;
-    border-radius: 5px;
-    padding: 10px;
     margin: 20px 0;
-    display: none;
+    text-align: left;
+    background-color: rgba(10, 10, 10, 0.9);
+    color: #3E280B;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 900px;
+    max-height: 400px;
+    overflow: auto;
+    font-family: 'Header-TITLE', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+/* Стиль для сообщений о том, что события не найдены */
+#not-found,#error-message {
+    text-align: center;
+    color: #f44336;
+    background-color: #fff3f3;
+    border: 1px solid #f44336;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 26px;
+    transition: all 0.3s ease-in-out;
 }
