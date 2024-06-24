@@ -1,0 +1,68 @@
+/*== Второй сайдбар ==*/
+.menu-bar-logo-wrap {
+    padding: 15px;
+    background-color: #333; /* Цвет фона */
+}
+
+.menu-bar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-bar-logo-abs {
+    display: inline-block;
+}
+
+.menu-bar-logo-small {
+    width: 50px;
+    height: auto;
+}
+
+.menu-bar-logo-big {
+    width: 100px;
+    height: auto;
+}
+
+.menu-bar-navigation {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: #444; /* Цвет фона */
+}
+
+.menu-bar-navigation-group {
+    margin-bottom: 10px;
+}
+
+.mbn-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.mbn-item-icon {
+    margin-right: 10px;
+}
+
+.mbn-item-icon img {
+    width: 24px;
+    height: auto;
+}
+
+.mbn-item-text {
+    font-size: 16px;
+}
+
+.mbn-item:hover {
+    background-color: #555;
+}
+
+.menu-bar-separator {
+    height: 1px;
+    background-color: #666;
+    margin: 10px 0;
+}
