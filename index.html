@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="assets/CSS/font.css">
     <link rel="stylesheet" href="assets/CSS/adaptation.css">
     <link rel="stylesheet" href="assets/CSS/menu-1.css">
+    <link rel="stylesheet" href="assets/CSS/navigation.css">
     <link rel="stylesheet" href="assets/CSS/keyframes.css   ">
     <link rel="stylesheet" href="assets/CSS/search.css">
     <link rel="stylesheet" href="assets/CSS/header.css">
     <link rel="stylesheet" href="assets/CSS/footer.css">
     <link rel="stylesheet" href="assets/CSS/gallery.css">
+    <link rel="stylesheet" href="assets/CSS/podcasts.css">
     <!-- Favicon -->
     <link rel="icon" href="assets/photo/icon/favicon.png" type="image/x-icon">
     <!-- Метатег для iOS -->
@@ -23,14 +25,6 @@
     <meta name="mobile-web-app-capable" content="yes">
 </head>
 <body>
-    <!--- HEADER --->
-    <header class="main-header">
-        <div class="header-title">Эхо веков</div>
-        <div class="header-description">
-            <p>Данное веб-приложение предназначено для поиска и изучения значимых исторических событий России. <br> Пользователи могут искать информацию по ключевым словам или датам, связанным с историческими событиями.</p>
-        </div>
-    </header>
-    
     <!-- MENU -->
     <div class="menu" id="sidebar-1">
         <div class="menu-icon" id="menu-icon">
@@ -68,20 +62,43 @@
         </div>
     </div>  
 
-    <!--- MAIN --->
+    <!--- HEADER --->
+    <header class="main-header">
+        <div class="header-title">Эхо веков</div>
+        <div class="header-description">
+            <p>Данное веб-приложение предназначено для поиска и изучения значимых исторических событий России. <br> Пользователи могут искать информацию по ключевым словам или датам, связанным с историческими событиями.</p>
+        </div>
+    </header>
+    
+    <!-- NAVIGATION -->
+    <nav class="navigation container historical">
+        <ul class="nav-list">
+            <li><a href="#" data-section="search">Поиск</a></li>
+            <li><a href="#" data-section="gallery">Галерея</a></li>
+            <li><a href="#" data-section="podcasts">Подкасты</a></li>
+            <li><a href="#" data-section="articles">Статьи</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- MAIN -->
     <main>
         <!-- Search Section -->
-        <section class="Search container">
+        <section class="Search container section" id="search" >
             <section class="Search">
                 <input type="text" id="search-input" placeholder="Введите ключевое слово">
                 <button id="search-btn">Поиск</button>
             </section>
 
-            <div id="results" style="display: none;"></div>
-            <div id="error-message" style="display: none;"></div>
+
+            <div class="message container">
+                <div id="results" style="display: none;"></div>
+                <div id="error-message" style="display: none;"></div>
+            </div>
         </section>
 
-        <section class="gallery container">
+        <!-- Gallery Section -->
+        <section class="gallery container section" id="gallery" style="display: none;">
             <h2>Историческая галерея</h2>
             <div class="slider">
                 <div class="slider-wrapper">
@@ -164,12 +181,50 @@
                     </div>
                 </div>
                 <div class="scroll-controls">
-                    <button class="scroll-left">&#10094;</button>
-                    <button class="scroll-right">&#10095;</button>
+                    <button class="scroll-left">❮</button>
+                    <button class="scroll-right">❯</button>
                 </div>
             </div>
         </section>
 
+        <!-- Podcasts Section -->
+        <section class="podcasts container section" id="podcasts" style="display: none;">
+            <div class="podcast-title">
+                <h2>Подкасты</h2>
+                <p>Подкасты о значимых исторических событиях России.</p>
+            </div>
+
+            <div class="podcast-list">
+                <div class="podcast">
+                    <h3>Подкаст 1: Революция 1917 года</h3>
+                    <p>Описание: Обсуждение причин и последствий Великой Октябрьской Социалистической Революции.</p>
+                    <button>Слушать</button>
+                </div>
+                <div class="podcast">
+                    <h3>Подкаст 2: Куликовская битва</h3>
+                    <p>Описание: История Куликовской битвы и её влияние на русскую историю.</p>
+                    <button>Слушать</button>
+                </div>
+                <div class="podcast">
+                    <h3>Подкаст 3: Полёт Юрия Гагарина</h3>
+                    <p>Описание: Первый полёт человека в космос и его значение для науки и общества.</p>
+                    <button>Слушать</button>
+                </div>
+                <div class="podcast">
+                    <h3>Подкаст 4: Распад СССР</h3>
+                    <p>Описание: Причины и последствия распада Советского Союза.</p>
+                    <button>Слушать</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles Section -->
+        <section class="articles container section" id="articles" style="display: none;">
+            <div class="container">
+                <h2>Статьи</h2>
+                <p>Статьи и обзоры исторических событий и личностей.</p>
+            </div>
+        </section>
     </main>
 
     <!--- FOOTER --->
@@ -182,9 +237,9 @@
     
 
     <!-- Scripts -->
-    <script src="assets/JS/preloader.js"></script>
     <script src="assets/JS/sidebar.js"></script>
     <script src="assets/JS/search-date.js"></script>
     <script src="assets/JS/slider.js"></script>
+    <script src="assets/JS/Nav-Visibility.js"></script>
 </body>
 </html>

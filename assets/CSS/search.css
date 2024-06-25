@@ -127,6 +127,12 @@
     color: #5C3D0F;
 }
 
+
+.message {
+    display: flex;
+    justify-content: center;
+}
+
 /* Стиль для сообщений об ошибках */
 #error-message {
     margin: 20px 0;

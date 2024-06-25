@@ -17,6 +17,7 @@
     font-family: 'Header-TITLE', sans-serif;
 }
 .header-description {
+    text-align: center;
     font-size: 1.1em;
     font-family: 'Header-DESC', sans-serif;
     max-width: 50%;

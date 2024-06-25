@@ -6,7 +6,7 @@
 @media (max-width: 768px) {
     /* main-header */
     .main-header {
-        display: grid !important;
+        flex-direction: column;
         justify-content: center;
         text-align: center;
     }
@@ -15,6 +15,44 @@
         margin-top: 10px;
     }
 }
+
+/*=== Navigation ===*/
+@media (max-width: 768px) {
+    .navigation.historical {
+        width: 70%;
+        padding: 10px;
+        box-shadow: none;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-list li {
+        flex: 1 1 45%;
+        margin: 10px 5px;
+    }
+
+    .nav-list a {
+        padding: 10px 20px;
+        font-size: 14px;
+        border-radius: 20px;
+    }
+    
+    .main-header {
+        padding: 10px 0;
+    }
+
+    .header-title {
+        font-size: 24px;
+    }
+
+    .header-description {
+        font-size: 14px;
+    }
+}
+
 
 /*=== Search.css ===*/
 @media (max-width: 768px) {
@@ -39,13 +77,15 @@
         width: 100%;
         max-width: 300px;
         margin: 1rem auto;
-        max-height: 200px; 
+        max-height: 200px;
+        padding: 10px;
     }
 
-    #results .event {
+    #results div {
         padding: 8px;
         margin: 5px 0;
         font-size: 14px;
+        border-radius: 8px;
     }
 
     .result-wrapper h4 {
@@ -56,6 +96,7 @@
         font-size: 14px; 
     }
 }
+
 @media (min-width: 601px) {
     #results {
         width: 100%;
@@ -65,6 +106,11 @@
 
 /* Стили для телефонов */
 @media (max-width: 600px) {
+    .container {
+        padding: 0px;
+    }
+
+
     /* body */
     body {
         background-size: cover;
@@ -73,8 +119,8 @@
         background-attachment: fixed; 
         background-image: url("../photo/background`s/background-Mobile.webp");
         font-size: 14px; 
-        position: relative; /* Для псевдоэлемента */
-        z-index: 1; /* Для наложения псевдоэлемента */
+        position: relative;
+        z-index: 1; 
     }
 
     body::before {
@@ -178,6 +224,15 @@
     }
 }
 
+/*=== podcasts.css ===*/
+@media (max-width: 768px) {
+    .podcast-list {
+        flex-direction: column;   
+    }
+    .podcast {
+        width: 90%;
+    }
+}
 
 /* Стили для планшетов */
 

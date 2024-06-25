@@ -1,0 +1,46 @@
+/* Стили для подкастов */
+.podcasts {
+    flex-direction: column;
+    margin: 2rem;
+    padding: 20px;
+    background-color: rgba(10, 10, 10, 0.9);
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.podcast-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.podcast {
+    width: calc(50% - 10px);
+    background-color: #4C4945;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.podcast-title {
+    font-family: 'Header-TITLE', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.podcast button {
+    padding: 10px 15px;
+    background-color: #D9BFA2;
+    color: #3E280B;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.podcast button:hover {
+    background-color: #A67B5B; /* Коричневый */
+    color: #F7E1C8; /* Пастельный бежевый */
+}
