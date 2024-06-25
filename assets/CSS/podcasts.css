@@ -13,8 +13,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
 }
-
 .podcast {
     width: calc(50% - 10px);
     background-color: #4C4945;
@@ -23,12 +23,12 @@
     border-radius: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 .podcast-title {
     font-family: 'Header-TITLE', sans-serif;
     font-size: 30px;
     text-align: center;
 }
+
 
 .podcast button {
     padding: 10px 15px;
@@ -41,6 +41,6 @@
 }
 
 .podcast button:hover {
-    background-color: #A67B5B; /* Коричневый */
-    color: #F7E1C8; /* Пастельный бежевый */
+    background-color: #A67B5B;
+    color: #F7E1C8;
 }

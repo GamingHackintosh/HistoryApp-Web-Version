@@ -228,8 +228,13 @@
 @media (max-width: 768px) {
     .podcast-list {
         flex-direction: column;   
+        width: 90%;
     }
     .podcast {
+        width: 90% !important;
+    }
+
+    .podcast_audio {
         width: 90%;
     }
 }
