@@ -251,32 +251,33 @@
         </section>
 
         <!-- Articles Section -->
-        <section class="articles container section" id="articles" style="display: none;">
-            <div class="article-title">
-                <h2>Статьи</h2>
-                <p>Статьи и обзоры исторических событий и личностей.</p>
-            </div>
-
-            <div class="article-list">
-                <div class="article">
-                    <h3>Статья 1: Заголовок статьи</h3>
-                    <p>Краткое описание статьи, рассказывающее о её содержании и значимости для истории.</p>
-                    <button class="open-modal" data-article="1">Читать статью</button>
+        <section class="articles container section" id="articles">
+            <div class="container">
+                <div class="article-title">
+                    <h2>Статьи</h2>
+                    <p>Статьи и обзоры исторических событий и личностей.</p>
                 </div>
-                <div class="article">
-                    <h3>Статья 2: Заголовок статьи</h3>
-                    <p>Краткое описание статьи, рассказывающее о её содержании и значимости для истории.</p>
-                    <button class="open-modal" data-article="2">Читать статью</button>
-                </div>
-                <div class="article">
-                    <h3>Статья 3: Заголовок статьи</h3>
-                    <p>Краткое описание статьи, рассказывающее о её содержании и значимости для истории.</p>
-                    <button class="open-modal" data-article="1">Читать статью</button>
-                </div>
-                <div class="article">
-                    <h3>Статья 4: Заголовок статьи</h3>
-                    <p>Краткое описание статьи, рассказывающее о её содержании и значимости для истории.</p>
-                    <button class="open-modal" data-article="1">Читать статью</button>
+                <div class="article-list">
+                    <div class="article">
+                        <h3>Куликовская битва</h3>
+                        <p>Куликовская битва, состоявшаяся 8 сентября 1380 года, является одним из важнейших сражений средневековой русской истории.</p>
+                        <button class="open-modal" data-article="1">Читать статью</button>
+                    </div>
+                    <div class="article">
+                        <h3>Полёт Юрия Гагарина: Первые шаги в космосе</h3>
+                        <p>12 апреля 1961 года Юрий Гагарин стал первым человеком, совершившим полёт в космос. Его полёт длился 108 минут и открыл новую эру в исследовании космоса.</p>
+                        <button class="open-modal" data-article="2">Читать статью</button>
+                    </div>
+                    <div class="article">
+                        <h3>Распад СССР: Причины и последствия</h3>
+                        <p>Распад Советского Союза в 1991 году стал результатом множества факторов, включая экономические проблемы, политическую нестабильность и национальные противоречия.</p>
+                        <button class="open-modal" data-article="3">Читать статью</button>
+                    </div>
+                    <div class="article">
+                        <h3>Революция 1917 года: Причины и последствия</h3>
+                        <p>Великая Октябрьская Социалистическая Революция, произошедшая в октябре 1917 года, привела к свержению Временного правительства и установлению власти Советов.</p>
+                        <button class="open-modal" data-article="4">Читать статью</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -295,10 +296,11 @@
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h3 id="modal-title"></h3>
-            <p id="modal-description"></p>
+            <h2 id="modal-title"></h2>
+            <div id="modal-description"></div>
         </div>
     </div>
+    
     <!-- Scripts -->
     <script src="assets/JS/sidebar.js"></script>
     <script src="assets/JS/search-date.js"></script>

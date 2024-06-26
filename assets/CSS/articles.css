@@ -10,20 +10,19 @@
 }
 
 .article-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     width: 100%;
 }
 
 .article {
-    width: calc(50% - 10px);
     background-color: #4C4945;
     padding: 15px;
-    margin-bottom: 20px;
     border-radius: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .article-title {
     font-family: 'Header-TITLE', sans-serif;
     font-size: 30px;
@@ -35,6 +34,7 @@
     font-size: 30px;
     text-align: center;
 }
+
 .article p {
     font-family: 'Times New Roman', Times, serif;
     font-size: 16px;

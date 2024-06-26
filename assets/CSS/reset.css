@@ -38,9 +38,7 @@ body::before {
     z-index: -1;
 }
 .container {
-    display: flex;
     align-items: center;
-    padding: 50px;
     margin: 0 auto;
 }
 /*===== Основной блок =====*/ 

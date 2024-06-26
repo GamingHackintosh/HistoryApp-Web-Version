@@ -20,18 +20,6 @@ The project is implemented using the following technologies:
 - CSS3
 - JavaScript
 
-## Running the Project
-
-To run the project locally:
-
-1. Clone the repository to your computer.
-
-- 1.1. Open the `index.html` file in your browser.
-
-OR
-
-2. [Visit the link](https://gaminghackintosh.github.io/HistoryApp-Web-Version/)
-
 ## Contributing
 
 If you want to contribute to the project, please discuss the changes you wish to make via issues first.

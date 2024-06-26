@@ -240,7 +240,23 @@
 }
 
 /*=== articles.css ===*/
+@media (max-width: 768px) {
+    .article-list {
+        display: flex;
+        flex-direction: column;
+    }
+    .article {
+        width: 85%;
+        margin-bottom: 20px;
+    }
 
+    .modal-content-wrapper {
+        flex-direction: column;
+    }
+    .modal-image {
+        width: 90% !important;
+    }
+}
 
 
 

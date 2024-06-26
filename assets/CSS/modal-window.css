@@ -20,6 +20,23 @@
     border: 1px solid #888;
     width: 80%;
     border-radius: 10px;
+    color: white;
+}
+
+.modal-content-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.modal-image {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.modal-text {
+    flex: 1;
 }
 
 .close {
