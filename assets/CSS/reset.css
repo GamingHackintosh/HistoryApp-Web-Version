@@ -61,3 +61,39 @@ section h2 {
 .section.active {
     display: contents; 
 }
+
+
+/*===== Button =====*/
+button {
+    background-color: #D9BFA2;
+    border: none;
+    color: #3E280B;
+    font-size: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #A67B5B;
+    color: #F7E1C8;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional Styles for Button to fit the design */
+.articles .article button {
+    width: 100%;
+    max-width: 200px;
+    margin: 10px auto;
+    display: block;
+}

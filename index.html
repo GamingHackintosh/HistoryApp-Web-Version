@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="assets/CSS/footer.css">
     <link rel="stylesheet" href="assets/CSS/gallery.css">
     <link rel="stylesheet" href="assets/CSS/podcasts.css">
+    <link rel="stylesheet" href="assets/CSS/articles.css">
+    <link rel="stylesheet" href="assets/CSS/modal-window.css">
     <!-- Favicon -->
     <link rel="icon" href="assets/photo/icon/favicon.png" type="image/x-icon">
     <!-- Метатег для iOS -->
@@ -250,11 +252,35 @@
 
         <!-- Articles Section -->
         <section class="articles container section" id="articles" style="display: none;">
-            <div class="container">
+            <div class="article-title">
                 <h2>Статьи</h2>
                 <p>Статьи и обзоры исторических событий и личностей.</p>
             </div>
+
+            <div class="article-list">
+                <div class="article">
+                    <h3>Статья 1: Заголовок статьи</h3>
+                    <p>Краткое описание статьи, рассказывающее о её содержании и значимости для истории.</p>
+                    <button class="open-modal" data-article="1">Читать статью</button>
+                </div>
+                <div class="article">
+                    <h3>Статья 2: Заголовок статьи</h3>
+                    <p>Краткое описание статьи, рассказывающее о её содержании и значимости для истории.</p>
+                    <button class="open-modal" data-article="2">Читать статью</button>
+                </div>
+                <div class="article">
+                    <h3>Статья 3: Заголовок статьи</h3>
+                    <p>Краткое описание статьи, рассказывающее о её содержании и значимости для истории.</p>
+                    <button class="open-modal" data-article="1">Читать статью</button>
+                </div>
+                <div class="article">
+                    <h3>Статья 4: Заголовок статьи</h3>
+                    <p>Краткое описание статьи, рассказывающее о её содержании и значимости для истории.</p>
+                    <button class="open-modal" data-article="1">Читать статью</button>
+                </div>
+            </div>
         </section>
+
     </main>
 
     <!--- FOOTER --->
@@ -265,11 +291,19 @@
         </p>
     </footer>
     
-
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+        </div>
+    </div>
     <!-- Scripts -->
     <script src="assets/JS/sidebar.js"></script>
     <script src="assets/JS/search-date.js"></script>
     <script src="assets/JS/slider.js"></script>
     <script src="assets/JS/Nav-Visibility.js"></script>
+    <script src="assets/JS/articles.js"></script>
 </body>
 </html>

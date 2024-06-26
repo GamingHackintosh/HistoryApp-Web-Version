@@ -1,0 +1,43 @@
+/* Стили для статей, аналогичные стилям для подкастов */
+.articles {
+    flex-direction: column;
+    margin: 2rem;
+    padding: 20px;
+    background-color: rgba(10, 10, 10, 0.9);
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.article-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.article {
+    width: calc(50% - 10px);
+    background-color: #4C4945;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.article-title {
+    font-family: 'Header-TITLE', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.article h3 {
+    font-family: 'Header-TITLE', sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+.article p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #D9BFA2;
+}
