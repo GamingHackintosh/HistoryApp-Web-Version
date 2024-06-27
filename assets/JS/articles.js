@@ -38,21 +38,24 @@ document.addEventListener('DOMContentLoaded', function () {
                     <img src="${articles[articleId].image}" alt="${articles[articleId].title}" class="modal-image">
                     <div class="modal-text">
                         <h2 class="modal-title">${articles[articleId].title}</h2>
-                        ${articles[articleId].description}
+                        <div id="modal-description">${articles[articleId].description}</div>
                     </div>
                 </div>`;
             modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
         });
     });
 
     // Закрытие модального окна
     closeModal.addEventListener('click', function () {
         modal.style.display = 'none';
+        document.body.style.overflow = '';
     });
 
     window.addEventListener('click', function (event) {
         if (event.target == modal) {
             modal.style.display = 'none';
+            document.body.style.overflow = '';
         }
     });
 });
