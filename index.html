@@ -4,22 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>История России</title>
+
     <!-- Styles -->
     <link rel="stylesheet" href="assets/CSS/reset.css">
     <link rel="stylesheet" href="assets/CSS/font.css">
     <link rel="stylesheet" href="assets/CSS/adaptation.css">
     <link rel="stylesheet" href="assets/CSS/menu-1.css">
     <link rel="stylesheet" href="assets/CSS/navigation.css">
-    <link rel="stylesheet" href="assets/CSS/keyframes.css   ">
+    <link rel="stylesheet" href="assets/CSS/keyframes.css">
     <link rel="stylesheet" href="assets/CSS/search.css">
     <link rel="stylesheet" href="assets/CSS/header.css">
     <link rel="stylesheet" href="assets/CSS/footer.css">
     <link rel="stylesheet" href="assets/CSS/gallery.css">
     <link rel="stylesheet" href="assets/CSS/podcasts.css">
     <link rel="stylesheet" href="assets/CSS/articles.css">
+    <link rel="stylesheet" href="assets/CSS/history-map.css">
     <link rel="stylesheet" href="assets/CSS/modal-window.css">
+
+    <!-- Styles (WEB) --->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
     <!-- Favicon -->
     <link rel="icon" href="assets/photo/icon/favicon.png" type="image/x-icon">
+
     <!-- Метатег для iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -79,6 +86,7 @@
             <li><a href="#" data-section="gallery">Галерея</a></li>
             <li><a href="#" data-section="podcasts">Подкасты</a></li>
             <li><a href="#" data-section="articles">Статьи</a></li>
+            <li><a href="#" data-section="map-section">Интерактивная Карта</a></li>
         </ul>
     </nav>
 
@@ -89,7 +97,7 @@
         <section class="Search container section" id="search" >
             <section class="Search">
                 <input type="text" id="search-input" placeholder="Введите ключевое слово">
-                <button id="search-btn">Поиск</button>
+                <button id="search-btn">Найти</button>
             </section>
 
 
@@ -282,6 +290,19 @@
             </div>
         </section>
 
+        <!-- Map Section -->
+        <section class="map container section" id="map-section">
+            <div class="container">
+                <div class="map-title">
+                    <h2>Интерактивная карта исторических событий</h2>
+                    <p>Отметки на карте показывают важные исторические события России.</pп>
+                </div>
+                <div class="map-container">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!--- FOOTER --->
@@ -307,5 +328,8 @@
     <script src="assets/JS/slider.js"></script>
     <script src="assets/JS/Nav-Visibility.js"></script>
     <script src="assets/JS/articles.js"></script>
+    <script src="assets/JS/initial-map.js"></script>
+    <!-- Scripts (WEB) -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>
 </html>

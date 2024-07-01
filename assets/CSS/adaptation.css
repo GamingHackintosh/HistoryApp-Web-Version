@@ -258,7 +258,12 @@
     }
 }
 
-
+/*=== History-Map.css ===*/
+@media (max-width: 768px) {
+    .map-container {
+        width: 90%;
+    }
+}
 
 
 /* Стили для планшетов */

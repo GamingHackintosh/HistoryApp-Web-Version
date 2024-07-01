@@ -1,0 +1,33 @@
+/* Стили для блока карты, аналогичные стилям для блока со статьями */
+.map {
+    flex-direction: column;
+    margin: 2rem;
+    padding: 20px;
+    background-color: rgba(10, 10, 10, 0.9);
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4C4945;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.map-title {
+    font-family: 'Header-TITLE', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
