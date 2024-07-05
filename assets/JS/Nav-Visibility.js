@@ -17,12 +17,21 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Функция для установки активного класса на выбранную ссылку
+    function setActiveLink(link) {
+        navLinks.forEach(navLink => {
+            navLink.classList.remove('active');
+        });
+        link.classList.add('active');
+    }
+
     // Добавление события клика на элементы навигации
     navLinks.forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
             const sectionId = this.getAttribute('data-section');
             showSection(sectionId);
+            setActiveLink(this);
         });
     });
 

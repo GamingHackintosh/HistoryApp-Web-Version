@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let eventsData = [];
 
     // Загружаем данные из date.json
-    fetch("assets/date.json")
+    fetch("assets/json/date.json")
         .then(response => response.json())
         .then(data => {
             eventsData = data;

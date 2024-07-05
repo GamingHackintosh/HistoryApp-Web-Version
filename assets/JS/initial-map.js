@@ -7,15 +7,27 @@ document.addEventListener("DOMContentLoaded", function () {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    // Загружаем данные из date.json
-    fetch('assets/data/date.json')
-        .then(response => response.json())
-        .then(data => {
-            data.dates.forEach(event => {
-                // Добавляем метку для каждого события
-                L.marker([event.latitude, event.longitude]).addTo(map)
-                    .bindPopup(`<b>${event.name}</b><br>${event.description}`);
-            });
-        })
-        .catch(error => console.error('Ошибка загрузки данных:', error));
+    // Функция для загрузки JSON данных
+    function loadJSON(url, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.overrideMimeType("application/json");
+        xhr.open('GET', url, true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                callback(JSON.parse(xhr.responseText));
+            }
+        };
+        xhr.send(null);
+    }
+
+    // Загрузка данных из date.json
+    loadJSON('assets/json/date.json', function (data) {
+        // Добавляем метки на карту
+        data.forEach(event => {
+            if (event.location && event.location.latitude && event.location.longitude) {
+                L.marker([event.location.latitude, event.location.longitude]).addTo(map)
+                    .bindPopup(`<b>${event.title}</b><br>${event.date}`);
+            }
+        });
+    });
 });

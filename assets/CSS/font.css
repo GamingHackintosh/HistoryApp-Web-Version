@@ -2,10 +2,8 @@
 @font-face {
     font-family: 'Header-TITLE';
     src: url('../fonts/MorfinSans-Regular.ttf') format('truetype');
-    /* ... */
 }
 @font-face {
     font-family: 'Header-DESC';
     src: url('../fonts/dance_partner_0.ttf') format('truetype');
-    /* ... */
 }
