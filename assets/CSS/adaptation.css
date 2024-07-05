@@ -28,12 +28,10 @@
         flex-direction: column;
         gap: 10px;
     }
-
     .nav-list li {
-        flex: 1 1 45%;
-        margin: 10px 5px;
+        width: 100%;
+        display: contents;
     }
-
     .nav-list a {
         padding: 10px 20px;
         font-size: 14px;

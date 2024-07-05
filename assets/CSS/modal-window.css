@@ -81,5 +81,5 @@
     font-family: 'Header-TITLE', sans-serif;
     font-size: 30px;
     text-align: center;
-    color: white;
+    color: var(--color-white);
 }

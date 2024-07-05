@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     background-color: rgba(10, 10, 10, 0.9);
-    color: #fff;
+    color: var(--color-white);
     padding: 2rem;
     border-radius: 10px;
     margin: 2rem;
@@ -36,7 +36,7 @@
 .scroll-controls button {
     background-color: rgba(0, 0, 0, 0.5);
     border: none;
-    color: white;
+    color: var(--color-white);
     font-size: 2rem;
     padding: 1rem;
     cursor: pointer;
@@ -88,7 +88,7 @@
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.8);
-    color: white;
+    color: var(--color-white);
     padding: 1rem;
     transition: visibility 0s, opacity 0.3s ease;
     text-align: left;
