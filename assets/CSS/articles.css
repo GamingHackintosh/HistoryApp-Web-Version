@@ -3,10 +3,10 @@
     flex-direction: column;
     margin: 2rem;
     padding: 20px;
-    background-color: rgba(10, 10, 10, 0.9);
+    background-color: #0a0a0ae6;
     color: var(--color-white);
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px var(--color-shadow);
 }
 
 .article-list {
@@ -20,7 +20,7 @@
     background-color: #4C4945;
     padding: 15px;
     border-radius: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px var(--color-shadow);
 }
 
 .article-title {
@@ -34,7 +34,6 @@
     font-size: 30px;
     text-align: center;
 }
-
 .article p {
     font-family: 'Times New Roman', Times, serif;
     font-size: 16px;

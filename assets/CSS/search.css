@@ -1,91 +1,76 @@
 /*===== Поиск =====*/
-.Search {
+.search.container.section {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
-.Search.container {
-    flex-direction: column;
+
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 850px;
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
-#search-input {
-    width: 250px;
-    padding: 15px;
-    margin-right: 10px;
-    border: 2px solid var(--color-primary);
-    border-radius: 25px;
-    color: var(--color-text);
+.search-field {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
     outline: none;
-    transition: all 0.3s ease-in-out;
     font-size: 16px;
     font-family: 'Times New Roman', Times, serif;
-    background-image: url('../photo/icon/search.svg');
-    background-repeat: no-repeat;
-    background-position: 10px center;
-    background-size: 20px;
-    text-indent: 30px;
 }
-#search-input::placeholder {
-    color: var(--color-text);
+
+.search-field::placeholder {
     font-style: italic;
-}
-#search-input:focus {
-    border: 5px solid var(--color-secondary);
-    width: 300px;
 }
 
 #search-btn {
-    padding: 10px 20px;
-    border: 2px solid var(--color-secondary);
-    background-color: var(--color-bg-alt);
-    color: var(--color-text-alt);
-    border-radius: 30px;
+    padding: 15px 20px;
+    border: none;
+    background-color: #000;
+    color: #fff;
     cursor: pointer;
-    transition: all 0.3s ease;
-    outline: none;
-    font-family: 'Times New Roman', Times, serif;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    outline: none;
+    transition: background-color 0.3s ease;
 }
+
 #search-btn:hover, #search-btn:focus {
-    background-color: var(--color-hover);
-    color: var(--color-hover-text);
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+    background-color: #333;
 }
 
 /*===== Результаты =====*/
 #results {
     margin: 20px 0;
-    text-align: left;
     background-color: var(--color-result-bg);
     color: var(--color-text-alt);
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 20px;
     width: 100%;
     max-width: 900px;
     max-height: 400px;
     overflow: auto;
-    font-family: 'Header-TITLE', sans-serif;
+    font-family: 'Seminaria';
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 1px solid var(--color-bg);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-#results:hover {
-    border-color: var(--color-bg);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 #results div {
     margin-bottom: 10px;
     padding: 10px;
-    border-radius: 10px;
-    letter-spacing: 0.1em;
+    border-radius: 5px;
     transition: background 0.3s, transform 0.3s;
 }
+
 #results div:hover {
     background: var(--color-result-hover-bg);
     color: var(--color-text);
@@ -95,11 +80,13 @@
 .result-wrapper {
     margin-bottom: 15px;
 }
+
 .result-wrapper h4 {
     font-size: 18px;
     margin-bottom: 5px;
     color: var(--color-text-alt);
 }
+
 .result-wrapper p {
     font-size: 16px;
     line-height: 1.5;
@@ -113,11 +100,12 @@
     border: 1px solid #e0e0e0;
     padding: 15px;
     margin: 15px 0;
-    border-radius: 10px;
+    border-radius: 5px;
     background: var(--color-bg-alt);
     color: var(--color-text-alt);
     transition: border-color 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
+
 .event:hover {
     border-color: var(--color-result-hover-bg);
     background: #fafafae6;
@@ -135,7 +123,7 @@
     text-align: left;
     background-color: var(--color-result-bg);
     color: var(--color-text-alt);
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 20px;
     width: 100%;
     max-width: 900px;
@@ -153,7 +141,7 @@
     color: var(--color-error);
     background-color: var(--color-error-bg);
     border: 1px solid var(--color-error);
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 20px;
     margin: 20px 0;
     font-size: 26px;

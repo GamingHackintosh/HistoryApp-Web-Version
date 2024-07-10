@@ -7,3 +7,8 @@
     font-family: 'Header-DESC';
     src: url('../fonts/dance_partner_0.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'Seminaria';
+    src: url('../fonts/Seminaria.ttf') format('truetype');
+}
