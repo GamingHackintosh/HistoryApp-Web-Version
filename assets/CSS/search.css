@@ -147,3 +147,11 @@
     font-size: 26px;
     transition: all 0.3s ease-in-out;
 }
+
+
+/*===== Случайное событие =====*/
+.random-event {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
