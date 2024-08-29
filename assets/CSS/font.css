@@ -12,3 +12,8 @@
     font-family: 'Seminaria';
     src: url('../fonts/Seminaria.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'Salwey';
+    src: url('../fonts/Salwey/Salwey.otf');
+}
