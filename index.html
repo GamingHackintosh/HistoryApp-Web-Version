@@ -97,13 +97,35 @@
     <main>
         <!-- Search Section -->
         <section class="search container section" id="search">
-            <article class="search-form">
-                <form role="search" method="get" class="search-form" action="#">
-                    <input type="search" class="search-field" id="search-input" placeholder="Search for..." value="" name="s" title="Search">
-                    <button type="submit" id="search-btn">Поиск</button>
-                </form>
-            </article>
-            
+            <!-- Forms -->
+            <div class="form">
+                <article class="search-form">
+                    <form role="search" method="get" class="search-form" action="#">
+                        <input type="search" class="search-field" id="search-input" placeholder="Search for..." value="" name="s" title="Search">
+                        <button id="search-btn">Поиск</button>
+                    </form>
+                    <!-- Фильтр по векам -->
+                    <div id="century-filter-wrapper">
+                        <select id="century-filter">
+                            <option value="">Все века</option>
+                            <option value="century-9">9 Век</option>
+                            <option value="century-10">10 Век</option>
+                            <option value="century-11">11 Век</option>
+                            <option value="century-12">12 Век</option>
+                            <option value="century-13">13 Век</option>
+                            <option value="century-14">14 Век</option>
+                            <option value="century-15">15 Век</option>
+                            <option value="century-16">16 Век</option>
+                            <option value="century-17">17 Век</option>
+                            <option value="century-18">18 Век</option>
+                            <option value="century-19">19 Век</option>
+                            <option value="century-20">20 Век</option>
+                            <option value="century-21">21 Век</option>
+                        </select>
+                    </div>
+                </article>
+            </div>
+
             <article class="random-event">
                 <button id="random-event-btn">Случайное событие</button>
             </article>
@@ -331,6 +353,7 @@
     
     <!-- Scripts -->
     <script src="assets/JS/sidebar.js"></script>
+    <script src="assets/JS/filterToggle.js"></script>
     <script src="assets/JS/search-date.js"></script>
     <script src="assets/JS/slider.js"></script>
     <script src="assets/JS/Nav-Visibility.js"></script>

@@ -3,8 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const resultsContainer = document.getElementById("results");
     const searchInput = document.getElementById("search-input");
     const searchBtn = document.getElementById("search-btn");
-    const randomEventBtn = document.getElementById("random-event-btn"); // Новая кнопка для случайного события
+    const searchForm = document.querySelector(".search-form form");
+    const randomEventBtn = document.getElementById("random-event-btn");
     const errorMessage = document.getElementById("error-message");
+    const centuryFilter = document.getElementById("century-filter");
 
     let eventsData = [];
 
@@ -42,8 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function displayEventsForCentury(data, century) {
         // Очищаем предыдущие результаты и скрываем сообщение об ошибке
         resultsContainer.innerHTML = "";
-        errorMessage.style.display = "none"; // Скрывает 
-        resultsContainer.style.display = "block"; // Показывает блок результатов
+        errorMessage.style.display = "none"; 
+        resultsContainer.style.display = "block"; 
 
         // Фильтруем события по веку
         const filteredEvents = data.filter(event => event.century === century);
@@ -66,8 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function displayEventsForKeyword(data, keyword) {
         // Очищаем предыдущие результаты и скрываем сообщение об ошибке
         resultsContainer.innerHTML = "";
-        errorMessage.style.display = "none"; // Скрываем
-        resultsContainer.style.display = "block"; // Показываем блок результатов
+        errorMessage.style.display = "none"; 
+        resultsContainer.style.display = "block"; 
     
         // Фильтруем события по ключевому слову
         const filteredEvents = data.filter(event => event.keywords.toLowerCase().includes(keyword));
@@ -91,8 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function displayRandomEvent(data) {
         // Очищаем предыдущие результаты и скрываем сообщение об ошибке
         resultsContainer.innerHTML = "";
-        errorMessage.style.display = "none"; // Скрываем сообщение об ошибке
-        resultsContainer.style.display = "block"; // Показываем блок результатов
+        errorMessage.style.display = "none"; 
+        resultsContainer.style.display = "block"; 
 
         // Выбираем случайное событие
         const randomIndex = Math.floor(Math.random() * data.length);
@@ -108,9 +110,51 @@ document.addEventListener("DOMContentLoaded", () => {
         resultsContainer.appendChild(eventElement);
     }
 
+    searchForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Предотвращаем стандартное поведение формы
+
+        const keyword = searchInput.value.trim().toLowerCase();
+        const selectedCentury = centuryFilter.value;
+
+        if (keyword === "" && selectedCentury === "") {
+            displayErrorMessage("Пожалуйста, введите ключевое слово или выберите век.");
+        } else {
+            // Вызов функции для поиска и отображения событий
+            displayFilteredEvents(eventsData, keyword, selectedCentury);
+        }
+    });
+
     function displayErrorMessage(message) {
+        // Очищаем контейнер результатов
+        resultsContainer.innerHTML = "";
+        resultsContainer.style.display = "none"; // Скрываем блок результатов
         errorMessage.textContent = message;
-        errorMessage.style.display = "block";
+        errorMessage.style.display = "block"; // Показываем сообщение об ошибке
+    }
+
+    function displayFilteredEvents(data, keyword, century) {
+        resultsContainer.innerHTML = "";
+        errorMessage.style.display = "none";
+        resultsContainer.style.display = "block";
+
+        const filteredEvents = data.filter(event => {
+            const keywordMatch = keyword === "" || event.keywords.toLowerCase().includes(keyword);
+            const centuryMatch = century === "" || event.century === century;
+            return keywordMatch && centuryMatch;
+        });
+
+        if (filteredEvents.length > 0) {
+            filteredEvents.forEach(event => {
+                const eventElement = document.createElement("div");
+                eventElement.classList.add("event");
+                eventElement.innerHTML = `
+                    <h3>${event.title}</h3>
+                    <p><strong>Дата:</strong> ${event.date}</p>
+                `;
+                resultsContainer.appendChild(eventElement);
+            });
+        } else {
+            resultsContainer.innerHTML = '<p id="not-found">Событий по данному запросу не найдено.</p>';
+        }
     }
 });
-Я
