@@ -1,35 +1,54 @@
 /*===== Шапка =====*/
 .main-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: rgba(10, 10, 10, 0.9); 
     color: var(--color-white);
-    padding: 2rem;
-    border-radius: 10px;
+    padding: 4rem 2rem;
+    border-radius: 15px;
     margin: 2rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
 }
 
+.header-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+
+.header-img {
+    width: 140px;
+    height: 140px;
+    background-image: url('../photo/icon/logo.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20%; 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.header-img:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.header-text {
+    max-width: 600px;
+}
 .header-title {
-    font-size: 3em;
+    font-size: 3.5em;
     font-weight: bold;
     font-family: 'Header-TITLE', sans-serif;
+    margin-bottom: 1rem;
+    color: #f8f8f8;
+    border-bottom: 3px solid #f8f8f8;
+    padding-bottom: 0.5rem;
 }
-.header-description {
-    text-align: center;
-    font-size: 1.1em;
+.header-description p {
+    font-size: 1.2em;
     font-family: 'Header-DESC', sans-serif;
-    max-width: 50%;
-    line-height: 1.6; 
-}
-
-.header-action {
-    color: #4e9af1;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-.header-action:hover {
-    color: #81baf6;
+    line-height: 1.6;
+    margin: 0;
+    color: #ddd;
 }

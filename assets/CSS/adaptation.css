@@ -2,20 +2,67 @@
 
 /*=== Header.css ===*/
 @media (max-width: 768px) {
-    /* main-header */
     .main-header {
+        padding: 2rem;
         flex-direction: column;
-        justify-content: center;
-        text-align: center;
+        text-align: center; 
     }
-    .header-description {
-        max-width: 100% !important;
-        margin-top: 10px;
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .header-img {
+        display: none; 
+    }
+
+    .header-text {
+        text-align: center; 
+    }
+    .header-title {
+        font-size: 3em;
+    }
+    .header-description p {
+        font-size: 15px;
     }
 }
 
+@media (max-width: 810px) {
+    .main-header {
+        padding: 2rem;
+        flex-direction: column;
+        text-align: center; 
+    }
+    
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .header-img {
+        display: none;
+    }
+
+    .header-text {
+        text-align: center; 
+    }
+
+    .header-title {
+        font-size: 2.8em;
+    }
+
+    .header-description p {
+        font-size: 1em; 
+        line-height: 1.4; 
+    }
+}
+
+
+
 /*=== Navigation ===*/
-@media (max-width: 768px) {
+@media (max-width: 810px) {
     .navigation.historical {
         width: 70%;
         padding: 10px;
@@ -34,18 +81,6 @@
         padding: 10px 20px;
         font-size: 14px;
         border-radius: 20px;
-    }
-    
-    .main-header {
-        padding: 10px 0;
-    }
-
-    .header-title {
-        font-size: 24px;
-    }
-
-    .header-description {
-        font-size: 14px;
     }
 }
 
@@ -117,6 +152,12 @@
         margin: 5px 0;
         font-size: 14px;
         border-radius: 10px;
+    }
+
+    #error-message {
+        display: flex;
+        position: inherit;
+        width: 280px;
     }
 }
 
