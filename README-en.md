@@ -1,7 +1,8 @@
 [Russian](README.md)  |
 
-
 # Echo of Centuries: Web Application
+
+<img src="assets/photo/headerReadme.png">
 
 ## Description
 

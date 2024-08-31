@@ -1,6 +1,8 @@
 [English](README-en.md) |
 
 # Эхо веков : Веб-Приложение
+<img src="assets/photo/headerReadme.png">
+
 
 ## Описание
 
