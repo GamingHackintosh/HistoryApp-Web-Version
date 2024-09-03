@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>История России</title>
+    <title>ЭХО ВЕКОВ : Web-приложения, в котором собраны все даты истории России, в удобный вид с поиском по дате и ключевым словам.</title>
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/CSS/reset.css">
     <link rel="stylesheet" href="assets/CSS/root.css">
     <link rel="stylesheet" href="assets/CSS/font.css">
     <link rel="stylesheet" href="assets/CSS/adaptation.css">
+    <link rel="stylesheet" href="assets/CSS/welcome.css">
     <link rel="stylesheet" href="assets/CSS/menu-1.css">
+    <link rel="stylesheet" href="assets/CSS/header.css">
     <link rel="stylesheet" href="assets/CSS/navigation.css">
     <link rel="stylesheet" href="assets/CSS/keyframes.css">
     <link rel="stylesheet" href="assets/CSS/button.css">
     <link rel="stylesheet" href="assets/CSS/search.css">
-    <link rel="stylesheet" href="assets/CSS/header.css">
-    <link rel="stylesheet" href="assets/CSS/footer.css">
     <link rel="stylesheet" href="assets/CSS/gallery.css">
     <link rel="stylesheet" href="assets/CSS/podcasts.css">
     <link rel="stylesheet" href="assets/CSS/articles.css">
     <link rel="stylesheet" href="assets/CSS/history-map.css">
+    <link rel="stylesheet" href="assets/CSS/footer.css">
     <link rel="stylesheet" href="assets/CSS/modal-window.css">
 
     <!-- Styles (WEB) --->
@@ -86,8 +87,11 @@
         </div>
     </header>
     
+
+    <!-- Кнопка для мобильного меню -->
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle">Меню</button>
     <!-- NAVIGATION -->
-    <nav class="navigation container historical">
+    <nav class="navigation container historical" id="nav-menu">
         <ul class="nav-list">
             <li><a data-section="search">Поиск</a></li>
             <li><a data-section="gallery">Галерея</a></li>
@@ -98,8 +102,18 @@
     </nav>
 
 
+
     <!-- MAIN -->
     <main>
+        <!-- Welcome Section -->
+        <div id="welcome-popup" class="welcome-popup">
+            <div class="welcome-popup-content">
+                <span id="close-popup" class="close-popup">&times;</span>
+                <h2>Добро пожаловать на сайт "Эхо Веков"</h2>
+                <p>Мы рады приветствовать вас на нашем сайте, где вы можете найти информацию о значимых исторических событиях России. Используйте навигацию, чтобы начать изучение.</p>
+            </div>
+        </div>        
+
         <!-- Search Section -->
         <section class="search container section" id="search">
             <!-- Forms -->
@@ -367,6 +381,8 @@
     
     <!-- Scripts -->
     <script src="assets/JS/sidebar.js"></script>
+    <script src="assets/JS/mobile-menu_nav.js"></script>
+    <script src="assets/JS/welcome.js"></script>
     <script src="assets/JS/filterToggle.js"></script>
     <script src="assets/JS/search-date.js"></script>
     <script src="assets/JS/slider.js"></script>

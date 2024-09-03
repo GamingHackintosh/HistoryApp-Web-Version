@@ -58,3 +58,18 @@
 .icon-podcast::before { content: "🎙️"; margin-right: 5px; }
 .icon-article::before { content: "📰"; margin-right: 5px; }
 .icon-map::before { content: "🗺️"; margin-right: 5px; }
+
+/* Стили для кнопки мобильного меню */
+.mobile-menu-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--color-button-bg);
+    color: var(--color-text-alt);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}

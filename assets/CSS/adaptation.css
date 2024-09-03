@@ -59,28 +59,44 @@
     }
 }
 
+/*=== Welcome.css ===*/
 
 
-/*=== Navigation ===*/
+/*=== Navigation.css ===*/
 @media (max-width: 810px) {
+    .mobile-menu-toggle {
+        display: block !important;
+    }
+
     .navigation.historical {
-        width: 70%;
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        right: 20px;
+        background-color: var(--color-bg-alt);
+        width: 200px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
         padding: 10px;
-        box-shadow: none;
+        z-index: 999;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .navigation.historical.active {
+        display: flex;
+        opacity: 1; 
+        transform: translateY(0);
     }
 
     .nav-list {
         flex-direction: column;
         gap: 10px;
     }
-    .nav-list li {
-        width: 100%;
-        display: contents;
-    }
     .nav-list a {
-        padding: 10px 20px;
-        font-size: 14px;
-        border-radius: 20px;
+        padding: 10px 0;
+        font-size: 16px;
     }
 }
 
