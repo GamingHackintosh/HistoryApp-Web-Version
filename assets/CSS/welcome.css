@@ -1,12 +1,11 @@
-/* Стили для всплывающего уведомления */
 .welcome-popup {
-    display: none; /* По умолчанию скрыто */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -31,7 +30,6 @@
     font-size: 1.8rem;
     margin-bottom: 10px;
 }
-
 .welcome-popup-content p {
     font-family: 'Header-DESC', sans-serif;
     font-size: 1rem;
@@ -44,10 +42,9 @@
     right: 10px;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--color-text-alt);
+    color: var(--color-white);
     transition: color 0.3s ease;
 }
-
 .close-popup:hover {
     color: var(--color-hover);
 }

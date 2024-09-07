@@ -1,20 +1,28 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var popup = document.getElementById('welcome-popup');
-    var closePopup = document.getElementById('close-popup');
+document.addEventListener('DOMContentLoaded', function () {
+    const popup = document.getElementById('welcome-popup');
+    const closeBtn = document.getElementById('close-popup');
 
-    if (localStorage.getItem('welcomePopupShown') !== 'true') {
+    // Функция для скрытия попапа
+    function hidePopup() {
+        popup.style.display = 'none';
+    }
+
+    // Проверяем, был ли уже показан попап
+    if (!localStorage.getItem('welcomePopupShown')) {
+        // Показываем попап при первом посещении
         popup.style.display = 'flex';
     }
 
-    closePopup.addEventListener('click', function() {
-        popup.style.display = 'none';
-        localStorage.setItem('welcomePopupShown', 'true');
+    // Когда пользователь нажимает на крестик, скрываем попап и сохраняем в localStorage
+    closeBtn.addEventListener('click', function() {
+        hidePopup();
+        localStorage.setItem('welcomePopupShown', 'true'); // Устанавливаем флаг, что попап был закрыт
     });
 
-    // Закрытие по клику вне окна
+    // Также закрываем попап, если пользователь кликнул за его пределы
     window.addEventListener('click', function(event) {
         if (event.target === popup) {
-            popup.style.display = 'none';
+            hidePopup();
             localStorage.setItem('welcomePopupShown', 'true');
         }
     });
