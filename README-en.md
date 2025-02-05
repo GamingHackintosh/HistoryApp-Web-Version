@@ -2,7 +2,7 @@
 
 # Echo of Centuries: Web Application
 
-<img src="assets/photo/headerReadme.png">
+<img src="assets/img/headerReadme.png">
 
 ## Description
 
@@ -32,9 +32,7 @@ This web application is designed for searching and exploring significant histori
 
 The project is built using the following technologies:
 
-- HTML5
-- CSS3
-- JavaScript
+- React
 
 ## Running the Project
 
