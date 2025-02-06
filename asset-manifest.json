@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/HistoryApp-Web-Version/static/css/main.a7c1f00a.css",
+    "main.js": "/HistoryApp-Web-Version/static/js/main.01acb1b9.js",
+    "static/media/background.webp": "/HistoryApp-Web-Version/static/media/background.873a5fa49bfe5c6e9686.webp",
+    "static/media/logo.png": "/HistoryApp-Web-Version/static/media/logo.a0a6d00b1d9d99fff7f4.png",
+    "static/media/Seminaria.ttf": "/HistoryApp-Web-Version/static/media/Seminaria.e99e1187e3540281b361.ttf",
+    "static/media/Salwey.otf": "/HistoryApp-Web-Version/static/media/Salwey.5227642fda464f97451e.otf",
+    "static/media/dance_partner_0.ttf": "/HistoryApp-Web-Version/static/media/dance_partner_0.627fc6d8c21b7161d71a.ttf",
+    "static/media/MorfinSans-Regular.ttf": "/HistoryApp-Web-Version/static/media/MorfinSans-Regular.a412e5dcdecc2b1ccf47.ttf",
+    "index.html": "/HistoryApp-Web-Version/index.html",
+    "static/media/home.svg": "/HistoryApp-Web-Version/static/media/home.6a8394b64390fc0968ab.svg",
+    "main.a7c1f00a.css.map": "/HistoryApp-Web-Version/static/css/main.a7c1f00a.css.map",
+    "main.01acb1b9.js.map": "/HistoryApp-Web-Version/static/js/main.01acb1b9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a7c1f00a.css",
+    "static/js/main.01acb1b9.js"
+  ]
+}
