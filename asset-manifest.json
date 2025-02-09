@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/HistoryApp-Web-Version/static/css/main.3e3cd591.css",
-    "main.js": "/HistoryApp-Web-Version/static/js/main.970fd11e.js",
+    "main.js": "/HistoryApp-Web-Version/static/js/main.23a0e4d4.js",
     "static/media/background-Mobile.webp": "/HistoryApp-Web-Version/static/media/background-Mobile.6de98bfc4630b741afc5.webp",
     "static/media/FoundingOfMoscow.webp": "/HistoryApp-Web-Version/static/media/FoundingOfMoscow.d9d6d36f411d2e569c61.webp",
     "static/media/background.webp": "/HistoryApp-Web-Version/static/media/background.873a5fa49bfe5c6e9686.webp",
@@ -20,10 +20,10 @@
     "index.html": "/HistoryApp-Web-Version/index.html",
     "static/media/home.svg": "/HistoryApp-Web-Version/static/media/home.6a8394b64390fc0968ab.svg",
     "main.3e3cd591.css.map": "/HistoryApp-Web-Version/static/css/main.3e3cd591.css.map",
-    "main.970fd11e.js.map": "/HistoryApp-Web-Version/static/js/main.970fd11e.js.map"
+    "main.23a0e4d4.js.map": "/HistoryApp-Web-Version/static/js/main.23a0e4d4.js.map"
   },
   "entrypoints": [
     "static/css/main.3e3cd591.css",
-    "static/js/main.970fd11e.js"
+    "static/js/main.23a0e4d4.js"
   ]
 }
