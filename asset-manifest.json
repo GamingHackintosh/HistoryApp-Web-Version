@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/HistoryApp-Web-Version/static/css/main.931aa249.css",
-    "main.js": "/HistoryApp-Web-Version/static/js/main.727084b8.js",
+    "main.css": "/HistoryApp-Web-Version/static/css/main.65931f21.css",
+    "main.js": "/HistoryApp-Web-Version/static/js/main.6ce7287c.js",
     "static/media/background-Mobile.webp": "/HistoryApp-Web-Version/static/media/background-Mobile.6de98bfc4630b741afc5.webp",
     "static/media/FoundingOfMoscow.webp": "/HistoryApp-Web-Version/static/media/FoundingOfMoscow.d9d6d36f411d2e569c61.webp",
     "static/media/background.webp": "/HistoryApp-Web-Version/static/media/background.873a5fa49bfe5c6e9686.webp",
@@ -12,21 +12,28 @@
     "static/media/Gagarinflight.jpg": "/HistoryApp-Web-Version/static/media/Gagarinflight.acb72285a788f4526ae5.jpg",
     "static/media/Covid19.webp": "/HistoryApp-Web-Version/static/media/Covid19.38c67b08ce22adc6f31d.webp",
     "static/media/Salwey.ttf": "/HistoryApp-Web-Version/static/media/Salwey.dc90bf8d8c1a9d934746.ttf",
+    "static/media/Secession_Light.ttf": "/HistoryApp-Web-Version/static/media/Secession_Light.2ae21932a9f627459ee6.ttf",
     "static/media/logo.png": "/HistoryApp-Web-Version/static/media/logo.a0a6d00b1d9d99fff7f4.png",
+    "static/media/Secession_Light_Alt_Caps.ttf": "/HistoryApp-Web-Version/static/media/Secession_Light_Alt_Caps.3d2eee39d04317577ee5.ttf",
     "static/media/BreakdownUSSR.jpg": "/HistoryApp-Web-Version/static/media/BreakdownUSSR.a751414d2dcc20130a5d.jpg",
-    "static/media/Seminaria.ttf": "/HistoryApp-Web-Version/static/media/Seminaria.e99e1187e3540281b361.ttf",
+    "static/media/Secession_Bold.ttf": "/HistoryApp-Web-Version/static/media/Secession_Bold.76faf672ed9751864527.ttf",
+    "static/media/Secession_Text_Alt_Caps.ttf": "/HistoryApp-Web-Version/static/media/Secession_Text_Alt_Caps.e0d4582310cd2234bf78.ttf",
+    "static/media/Secession_Text.ttf": "/HistoryApp-Web-Version/static/media/Secession_Text.ee24399f57ba22170081.ttf",
+    "static/media/Secession_Bold_Alt_Caps.ttf": "/HistoryApp-Web-Version/static/media/Secession_Bold_Alt_Caps.97a0a4d47635fb12cbb6.ttf",
     "static/media/Salwey.woff": "/HistoryApp-Web-Version/static/media/Salwey.92381a5fdb7d1d5e20cb.woff",
     "static/media/Salwey.otf": "/HistoryApp-Web-Version/static/media/Salwey.5227642fda464f97451e.otf",
     "static/media/dance_partner_0.ttf": "/HistoryApp-Web-Version/static/media/dance_partner_0.627fc6d8c21b7161d71a.ttf",
     "static/media/Salwey.woff2": "/HistoryApp-Web-Version/static/media/Salwey.d2e4790fcede6eaf2d61.woff2",
+    "static/media/Secession.ttf": "/HistoryApp-Web-Version/static/media/Secession.c0fa245629cdef067eaa.ttf",
     "static/media/MorfinSans-Regular.ttf": "/HistoryApp-Web-Version/static/media/MorfinSans-Regular.a412e5dcdecc2b1ccf47.ttf",
+    "static/media/Secession.otf": "/HistoryApp-Web-Version/static/media/Secession.fd3089d1fc4533b6ffd8.otf",
     "index.html": "/HistoryApp-Web-Version/index.html",
     "static/media/home.svg": "/HistoryApp-Web-Version/static/media/home.6a8394b64390fc0968ab.svg",
-    "main.931aa249.css.map": "/HistoryApp-Web-Version/static/css/main.931aa249.css.map",
-    "main.727084b8.js.map": "/HistoryApp-Web-Version/static/js/main.727084b8.js.map"
+    "main.65931f21.css.map": "/HistoryApp-Web-Version/static/css/main.65931f21.css.map",
+    "main.6ce7287c.js.map": "/HistoryApp-Web-Version/static/js/main.6ce7287c.js.map"
   },
   "entrypoints": [
-    "static/css/main.931aa249.css",
-    "static/js/main.727084b8.js"
+    "static/css/main.65931f21.css",
+    "static/js/main.6ce7287c.js"
   ]
 }
