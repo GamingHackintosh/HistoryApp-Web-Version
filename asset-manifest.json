@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/HistoryApp-Web-Version/static/css/main.a96f2097.css",
-    "main.js": "/HistoryApp-Web-Version/static/js/main.fdeeda47.js",
+    "main.css": "/HistoryApp-Web-Version/static/css/main.cebb88ac.css",
+    "main.js": "/HistoryApp-Web-Version/static/js/main.ce5cd987.js",
     "static/media/background-Mobile.webp": "/HistoryApp-Web-Version/static/media/background-Mobile.6de98bfc4630b741afc5.webp",
     "static/media/FoundingOfMoscow.webp": "/HistoryApp-Web-Version/static/media/FoundingOfMoscow.d9d6d36f411d2e569c61.webp",
     "static/media/background.webp": "/HistoryApp-Web-Version/static/media/background.873a5fa49bfe5c6e9686.webp",
@@ -29,11 +29,11 @@
     "static/media/Secession.otf": "/HistoryApp-Web-Version/static/media/Secession.fd3089d1fc4533b6ffd8.otf",
     "index.html": "/HistoryApp-Web-Version/index.html",
     "static/media/home.svg": "/HistoryApp-Web-Version/static/media/home.6a8394b64390fc0968ab.svg",
-    "main.a96f2097.css.map": "/HistoryApp-Web-Version/static/css/main.a96f2097.css.map",
-    "main.fdeeda47.js.map": "/HistoryApp-Web-Version/static/js/main.fdeeda47.js.map"
+    "main.cebb88ac.css.map": "/HistoryApp-Web-Version/static/css/main.cebb88ac.css.map",
+    "main.ce5cd987.js.map": "/HistoryApp-Web-Version/static/js/main.ce5cd987.js.map"
   },
   "entrypoints": [
-    "static/css/main.a96f2097.css",
-    "static/js/main.fdeeda47.js"
+    "static/css/main.cebb88ac.css",
+    "static/js/main.ce5cd987.js"
   ]
 }
