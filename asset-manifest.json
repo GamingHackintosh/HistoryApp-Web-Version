@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/HistoryApp-Web-Version/static/css/main.1233bea5.chunk.css",
-    "main.js": "/HistoryApp-Web-Version/static/js/main.d91828c7.chunk.js",
-    "main.js.map": "/HistoryApp-Web-Version/static/js/main.d91828c7.chunk.js.map",
+    "main.js": "/HistoryApp-Web-Version/static/js/main.a24afdef.chunk.js",
+    "main.js.map": "/HistoryApp-Web-Version/static/js/main.a24afdef.chunk.js.map",
     "runtime-main.js": "/HistoryApp-Web-Version/static/js/runtime-main.d9a7254e.js",
     "runtime-main.js.map": "/HistoryApp-Web-Version/static/js/runtime-main.d9a7254e.js.map",
     "static/js/2.6128b0e3.chunk.js": "/HistoryApp-Web-Version/static/js/2.6128b0e3.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.d9a7254e.js",
     "static/js/2.6128b0e3.chunk.js",
     "static/css/main.1233bea5.chunk.css",
-    "static/js/main.d91828c7.chunk.js"
+    "static/js/main.a24afdef.chunk.js"
   ]
 }
