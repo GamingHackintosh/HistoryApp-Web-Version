@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/HistoryApp-Web-Version/static/css/main.d6c3fb65.chunk.css",
-    "main.js": "/HistoryApp-Web-Version/static/js/main.27e4394b.chunk.js",
-    "main.js.map": "/HistoryApp-Web-Version/static/js/main.27e4394b.chunk.js.map",
+    "main.css": "/HistoryApp-Web-Version/static/css/main.9c88ec63.chunk.css",
+    "main.js": "/HistoryApp-Web-Version/static/js/main.0c7d3bd9.chunk.js",
+    "main.js.map": "/HistoryApp-Web-Version/static/js/main.0c7d3bd9.chunk.js.map",
     "runtime-main.js": "/HistoryApp-Web-Version/static/js/runtime-main.d9a7254e.js",
     "runtime-main.js.map": "/HistoryApp-Web-Version/static/js/runtime-main.d9a7254e.js.map",
     "static/js/2.6128b0e3.chunk.js": "/HistoryApp-Web-Version/static/js/2.6128b0e3.chunk.js",
     "static/js/2.6128b0e3.chunk.js.map": "/HistoryApp-Web-Version/static/js/2.6128b0e3.chunk.js.map",
     "index.html": "/HistoryApp-Web-Version/index.html",
-    "static/css/main.d6c3fb65.chunk.css.map": "/HistoryApp-Web-Version/static/css/main.d6c3fb65.chunk.css.map",
+    "static/css/main.9c88ec63.chunk.css.map": "/HistoryApp-Web-Version/static/css/main.9c88ec63.chunk.css.map",
     "static/js/2.6128b0e3.chunk.js.LICENSE.txt": "/HistoryApp-Web-Version/static/js/2.6128b0e3.chunk.js.LICENSE.txt",
     "static/media/Gallery.scss": "/HistoryApp-Web-Version/static/media/WW2.bb0297f7.jpeg",
     "static/media/Fonts.scss": "/HistoryApp-Web-Version/static/media/dance_partner_0.627fc6d8.ttf",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.d9a7254e.js",
     "static/js/2.6128b0e3.chunk.js",
-    "static/css/main.d6c3fb65.chunk.css",
-    "static/js/main.27e4394b.chunk.js"
+    "static/css/main.9c88ec63.chunk.css",
+    "static/js/main.0c7d3bd9.chunk.js"
   ]
 }
