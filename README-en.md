@@ -34,17 +34,6 @@ The project is built using the following technologies:
 
 - React
 
-## Running the Project
-
-To run the project locally, you need to:
-
-1. Clone the repository to your computer.
-
-- 1.1. Open the `index.html` file in your browser.
-
-OR
-
-2. [Go to the link](https://gaminghackintosh.github.io/HistoryApp-Web-Version/)
 
 ## Contributing
 
