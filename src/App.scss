@@ -1,0 +1,282 @@
+:root {
+  --glass-bg: rgba(30, 42, 80, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  --text-primary: #e6dcc8;
+  --text-secondary: #d1c9b7;
+  --accent-color: #8a7f6a;
+  --transition: all 0.3s ease;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+* {
+  list-style: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*===== Сброс стилей =====*/
+html {
+  scroll-behavior: smooth;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e0e0e0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-image: url("assets/images/backgrounds/background.webp");
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-before);
+  z-index: -1;
+}
+
+.container {
+  align-items: center;
+}
+
+/*===== Основной блок =====*/ 
+main {
+  flex: 1;
+  transition: padding-left 0.3s ease;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+section h2 {
+  font-weight: bold; 
+}
+
+.section {
+  display: none;
+}
+
+.section.active {
+  display: contents; 
+}
+
+/*===== Button =====*/
+button {
+  background-color: var(--color-button-bg);
+  border: none;
+  color: var(--color-text-alt);
+  font-size: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 30px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: var(--color-button-hover);
+  color: var(--color-hover-text);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px var(--color-shadow);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px var(--color-shadow);
+}
+
+.articles .article button {
+  max-width: 200px;
+  margin: 10px auto;
+  display: block;
+}
+
+/* Мобильные стили */
+@media (max-width: 600px) {
+  .container {
+    padding: 0px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-before);
+    z-index: -1;
+  }
+
+  main {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+
+  section {
+    margin-bottom: 15px;
+  }
+
+  .menu {
+    border-right: 15px solid #3c3c3c;
+  }
+}
+
+/* Мобильные адаптивы для 768px */
+@media (max-width: 768px) {
+  * {
+    list-style: none;
+    text-decoration: none;
+    box-sizing: content-box;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  /* content */
+  #content.shift {
+    margin-left: 0; 
+  }
+
+  .menu {
+    left: -310px;
+  }
+
+  .menu:hover {
+    left: 0;
+  }
+
+  .message.container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #results div,
+  .event,
+  #error-message {
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+
+  #error-message {
+    display: flex;
+    position: inherit;
+    width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 1.5rem 1rem;
+    
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+}

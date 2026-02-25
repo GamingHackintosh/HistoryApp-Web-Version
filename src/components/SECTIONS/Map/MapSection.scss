@@ -1,0 +1,103 @@
+@use '../../../_variables.scss' as *;
+
+.map-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $color-map-bg;
+  color: $color-button-bg;
+  padding: 1rem;
+  border-radius: 12px;
+  margin: 2rem;
+  border: 2px solid $color-map-border;
+  box-shadow: 0 8px 30px $color-before, inset 0 0 20px rgba($color-map-border, 0.1);
+  position: relative;
+  overflow: hidden;
+
+  .map-title {
+    font-family: 'TITLE', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-map-container-bg;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: 0 2px 4px $color-shadow;
+    position: relative;
+
+    .map {
+      width: 100%;
+      min-height: 500px;
+      border-radius: 15px;
+      position: relative;
+      
+      // Стили для плавных переходов
+      .leaflet-fade-anim .leaflet-tile,
+      .leaflet-zoom-anim .leaflet-zoom-animated {
+        transition: all 0.25s linear;
+        will-change: transform;
+      }
+
+      .leaflet-zoom-anim .leaflet-zoom-animated {
+        transform-origin: 50% 50%;
+      }
+
+      // Плавное появление маркеров
+      .leaflet-marker-icon {
+        transition: all 0.3s ease;
+        
+        &:hover {
+          transform: scale(1.1);
+          filter: brightness(1.2);
+        }
+      }
+
+      // Плавное появление попапов
+      .leaflet-popup {
+        transition: all 0.3s ease;
+      }
+
+      // Плавное масштабирование контролов
+      .leaflet-control {
+        transition: all 0.2s ease;
+        
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+
+// Map Styles
+.map {
+  height: 500px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .map-section {        
+    margin: 1rem;
+    padding: 1rem;
+      .map-title {
+        h2 {
+          font-size: 24px;
+        }
+
+        p {
+          font-size: 20px;
+        }
+      }
+
+      .map-container.mobile {
+        padding: 10px;
+      }
+  }
+}

@@ -1,0 +1,256 @@
+@use '../../_variables.scss' as *;
+
+.preloader-scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $color-preloader-bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.7s ease;
+  
+  /* Текстура винтажной бумаги */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        rgba($color-light-text, 0.03) 25%,
+        transparent 25%,
+        transparent 75%,
+        rgba($color-light-text, 0.03) 75%
+    );
+    background-size: 4px 4px;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  /* Эффект виньетки */
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+      ellipse at center,
+      transparent 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .preloader-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .preloader-title {
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'TITLE', sans-serif;
+    color: $color-preloader-text;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    
+    .title-accent {
+      color: $color-preloader-accent;
+    }
+  }
+  
+  .preloader-text {
+    font-size: 1.3em;
+    font-family: 'DESC', sans-serif;
+    color: $color-preloader-text;
+    opacity: 0.9;
+    margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
+    
+    &::after {
+      content: '...';
+      position: absolute;
+      width: 10px;
+      text-align: left;
+      animation: dots 1.5s infinite;
+    }
+  }
+  
+  /* Стилизация и анимация свитка */
+  .scroll-container {
+    width: 150px;
+    height: 180px;
+    position: relative;
+    
+    .scroll {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      animation: scroll-pulse 2s infinite alternate;
+      
+      .scroll-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        background-color: $color-scroll-top-bottom;
+        border-radius: 10px 10px 0 0;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+        z-index: 3;
+      }
+      
+      .scroll-paper {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        background-color: $color-scroll-paper;
+        z-index: 1;
+        overflow: hidden;
+        
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            to bottom,
+            rgba(226, 219, 203, 0.9) 0%,
+            rgba($color-preloader-text, 0.5) 100%
+          );
+        }
+        
+        .scroll-text {
+          width: 100%;
+          height: 100%;
+          padding: 20px 10px;
+          
+          .ink-line {
+            height: 2px;
+            background-color: $color-ink-line;
+            margin: 15px 0;
+            border-radius: 1px;
+            animation: write-line 2s ease-in-out infinite;
+            
+            &.line1 {
+              width: 80%;
+              animation-delay: 0s;
+            }
+            
+            &.line2 {
+              width: 65%;
+              animation-delay: 0.3s;
+            }
+            
+            &.line3 {
+              width: 75%;
+              animation-delay: 0.6s;
+            }
+            
+            &.line4 {
+              width: 50%;
+              animation-delay: 0.9s;
+            }
+          }
+        }
+      }
+      
+      .scroll-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 20px;
+        background-color: $color-scroll-top-bottom;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.3);
+        z-index: 3;
+      }
+    }
+  }
+}
+
+/* Анимация пульсации свитка */
+@keyframes scroll-pulse {
+  0% {
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 5px rgba($color-preloader-text, 0.2));
+  }
+  100% {
+    transform: scale(1.05) rotate(1deg);
+    filter: drop-shadow(0 0 15px rgba($color-preloader-text, 0.4));
+  }
+}
+
+/* Анимация написания строк */
+@keyframes write-line {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 0.7;
+  }
+}
+
+/* Анимация многоточия */
+@keyframes dots {
+  0% { content: ''; }
+  25% { content: '.'; }
+  50% { content: '..'; }
+  75% { content: '...'; }
+  100% { content: ''; }
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .preloader-scroll {
+    .preloader-title {
+      font-size: 2.5em;
+    }
+    
+    .preloader-text {
+      font-size: 1.1em;
+    }
+    
+    .scroll-container {
+      width: 120px;
+      height: 150px;
+    }
+  }
+} 

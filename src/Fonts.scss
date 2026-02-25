@@ -1,0 +1,63 @@
+/*=============== Шрифты ===============*/
+
+/* Основные заголовки */
+@font-face {
+    font-family: 'TITLE';
+    src: url('./fonts/MorfinSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Описания и текст */
+@font-face {
+    font-family: 'DESC';
+    src: url('./fonts/dance_partner_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Salwey (Рукописный стиль) */
+@font-face {
+    font-family: 'Salwey';
+    src: url('./fonts/Salwey/Salwey.woff2') format('woff2'),
+         url('./fonts/Salwey/Salwey.woff') format('woff'),
+         url('./fonts/Salwey/Salwey.otf') format('opentype'),
+         url('./fonts/Salwey/Salwey.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Secession (Старославянский/исторический стиль) */
+@font-face {
+    font-family: 'Secession';
+    src: url('./fonts/Secession Family/Secession.otf') format('opentype'),
+         url('./fonts/Secession Family/Secession.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Secession Variants */
+@font-face {
+    font-family: 'Secession Bold';
+    src: url('./fonts/Secession Family/Secession_Bold.ttf') format('truetype'),
+         url('./fonts/Secession Family/Secession_Bold_Alt_Caps.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Secession Light';
+    src: url('./fonts/Secession Family/Secession_Light.ttf') format('truetype'),
+         url('./fonts/Secession Family/Secession_Light_Alt_Caps.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Secession Text';
+    src: url('./fonts/Secession Family/Secession_Text.ttf') format('truetype'),
+         url('./fonts/Secession Family/Secession_Text_Alt_Caps.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

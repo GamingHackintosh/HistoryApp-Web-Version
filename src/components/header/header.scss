@@ -1,0 +1,191 @@
+@use '../../_variables.scss' as *;
+
+.main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-dark-background;
+  color: $color-header-title;
+  padding: 4rem 2rem;
+  border-radius: 12px;
+  margin: 3rem;
+  border: 2px solid $color-border-main;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5),
+              inset 0 0 20px $color-light-text-transparent-10;
+  position: relative;
+  overflow: hidden;
+  
+  /* Vintage paper texture overlay */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        rgba($color-light-text, 0.03) 25%,
+        transparent 25%,
+        transparent 75%,
+        rgba($color-light-text, 0.03) 75%
+    );
+    background-size: 4px 4px;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  /* Subtle vignette effect */
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+      ellipse at center,
+      transparent 0%,
+      $color-black-transparent-dark 100%
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Коннектор для визуального соединения с контентом ниже */
+  .header-connector {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 60px;
+    background-color: $color-dark-background;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    border-left: 2px solid $color-border-main;
+    border-right: 2px solid $color-border-main;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+  }
+
+  .header-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 2;
+
+    .header-logo {
+      width: 160px;
+      height: 160px;
+      background-image: url('../../assets/images/icon/logo.png');
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      border: 2px solid $color-border-main;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5),
+                  inset 0 0 10px $color-light-text-transparent-10;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6),
+                    inset 0 0 15px rgba(209, 201, 183, 0.15);
+      }
+    }
+
+    .header-text {
+      max-width: 600px;
+      text-align: left;
+
+      .header-title {
+        font-size: 4em;
+        font-weight: bold;
+        font-family: 'TITLE', sans-serif;
+        margin-bottom: 1.5rem;
+        color: $color-light-text;
+        border-bottom: 2px solid $color-border-main;
+        padding-bottom: 0.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: $color-light-text-hover;
+          text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+        }
+      }
+
+      .header-description {
+        p {
+          font-size: 1.3em;
+          font-family: 'DESC', sans-serif;
+          line-height: 1.7;
+          margin: 0;
+          color: $color-light-text;
+          opacity: 0.9;
+          transition: all 0.3s ease;
+
+          &:hover {
+            opacity: 1;
+            color: $color-light-text-hover;
+          }
+        }
+      }
+    }
+  }
+
+  /*=== Адаптивные стили ===*/
+  @media (max-width: 768px) {
+    margin: 1rem;
+    padding: 3rem 2rem;
+    flex-direction: column;
+    text-align: center;
+
+    .header-connector {
+      width: 80%;
+      bottom: -20px;
+      height: 40px;
+    }
+
+    .header-content {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+
+      .header-text {
+        text-align: center;
+
+        .header-title {
+          font-size: 3.5em;
+        }
+
+        .header-description {
+          p {
+            font-size: 1.1em;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 810px) {
+    .header-title {
+      font-size: 3.2em;
+    }
+
+    .header-description {
+      p {
+        font-size: 1em;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .header-logo {
+      display: none;
+    }
+  }
+}
